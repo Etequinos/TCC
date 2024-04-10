@@ -1,0 +1,37 @@
+.nav-bar {
+    background: #5E3023;
+    height: 106px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.nav-logo {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.nav-label {
+    color: #FFFFFF;
+    width: 453px;
+    height: 70;
+    margin-left: 27px;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-btn {
+    height: 54px;
+    width: 250px;
+    border-radius: 30px;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav-mesa {
+    margin-left: 500px;
+}
