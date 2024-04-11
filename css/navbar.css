@@ -5,6 +5,7 @@
     flex-direction: row;
     align-items: center;
     border-radius: 0px 0px 30px 30px;
+    margin-bottom: 110px;
 }
 
 .nav-logo {
@@ -34,4 +35,29 @@
 
 .nav-mesa {
     margin-left: 500px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-bar {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .nav-label {
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .nav-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-mesa {
+        margin-left: 0;
+    }
 }

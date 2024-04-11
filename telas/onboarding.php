@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/onboarding.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,19 +12,14 @@
     ?>
 
 <div class="onboarding-container">
-  <h1>Já nos Visitou Antes?</h1>
+  <h1>Já nos visitou antes?</h1>
   <p>VENHA PARTICIPAR DO CLUBE FIDELIDADE</p>
+<br>
 
-  <div class="options">
-    <a href="#join-loyalty-club" class="button">Join Loyalty Club</a>
-    <a href="#enter-anonymously" class="button">Enter Anonimamente</a>
-  </div>
-
-  <h2 id="join-loyalty-club">Entre no clube de fidelidade</h2>
-  <p>nsira seu CPF para fazer parte do nosso clube de fidelidade e aproveitar benefícios exclusivos.</p>
   <form action="/join-loyalty-club" method="post">
+    <p>CPF</p>
     <input type="text" id="cpfInput" maxlength="14" name="cpf" placeholder="CPF" required>
-    <button type="submit">Confirm</button>
+    <button type="submit">Confirmar</button>
   </form>
   <script>
 document.getElementById('cpfInput').addEventListener('input', function (event) {
@@ -41,8 +36,6 @@ document.getElementById('cpfInput').addEventListener('input', function (event) {
   event.target.value = cpf;
 });
 </script>
-  <h2 id="enter-anonymously">Entre  Anonimamente</h2>
-  <p>Você ainda pode desfrutar de nossos serviços sem aderir ao clube de fidelidade.</p>
   <a href="/anonymous-entry" class="button">Entre anonimamente.</a>
 </div>
 
