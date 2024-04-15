@@ -15,12 +15,14 @@
   <h1>Já nos visitou antes?</h1>
   <p>VENHA PARTICIPAR DO CLUBE FIDELIDADE</p>
 <br>
-
+<div id="cpf" >  
+  <p>CPF</p>
+  </div>
   <form action="/join-loyalty-club" method="post">
-    <p>CPF</p>
-    <input type="text" id="cpfInput" maxlength="14" name="cpf" placeholder="CPF" required>
-    <button type="submit">Confirmar</button>
+    <input type="text" id="cpfInput" maxlength="14" name="cpf" placeholder="" required>
   </form>
+  <div class="botoes">
+  <button type="submit">Confirmar</button>
   <script>
 document.getElementById('cpfInput').addEventListener('input', function (event) {
   let cpf = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
