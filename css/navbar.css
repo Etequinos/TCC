@@ -1,11 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .nav-bar {
-    background: #5E3023;
+    background-color: rgba(94, 48, 35, 1/*0.7*/);
     height: 106px;
+    width: 1440px;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 0px 0px 30px 30px;
-    margin-bottom: 110px;
+    margin-bottom: 10px;
 }
 
 .nav-logo {
@@ -38,7 +43,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .nav-bar {
         height: auto;
         padding: 10px;

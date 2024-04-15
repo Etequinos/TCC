@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #C08552;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .login-container{
+    margin: 180px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+h1{
+  color: #ffffff;
+}
+
+
+input[type="text"] {
+    width: 100%; /* Ajustado para caber melhor em telas de tablet */
+    height: 10vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: #ffffff;
+    border-width: 5px;
+    font-size: 40px;
+    color: #ffffff; /*cor do texto*/
+    background: #cccccc;
+  }
