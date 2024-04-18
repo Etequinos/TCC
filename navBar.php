@@ -1,4 +1,3 @@
-
 <head>
     <link rel='stylesheet' href='../css/navbar.css'>
 </head>
