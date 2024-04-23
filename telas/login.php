@@ -19,6 +19,7 @@
     <input type="text" name="mesa" id="mesa_input">
     <label for="senha">Senha</label>
     <input type="text" name="senha" id="senha_input">
-    </div>
+    <button type="submit">APLICAR</button>
+</div>
 </body>
 </html>
