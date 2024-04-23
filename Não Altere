@@ -1,0 +1,5 @@
+# QR Code
+# https://www.qr-code-generator.com
+
+# URL para o QR'''
+# otpauth://totp/TCC:username?secret=CRBRT55RJS4DYBZB&issuer=TCC&algorithm=SHA1&digits=6&period=30
