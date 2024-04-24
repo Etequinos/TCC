@@ -18,10 +18,16 @@
     <label for="id">Mesa</label>
     <input type="number" name="id" id="id">
     <label for="senha">Senha</label>
+
+    <input type="text" name="senha" id="senha_input">
+    <button type="submit">APLICAR</button>
+</div>
+
     <input type="text" name="senha" id="senha">
     <button type="submit" value="Verify" >Confirmar</button>
      </form>
     </div>
+
 
 </body>
 </html>

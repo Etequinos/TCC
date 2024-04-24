@@ -14,17 +14,19 @@
   }
   
   .login-container{
-    margin: 180px auto;
+    margin: 140px auto;
     display: flex;
     flex-direction: column;
     padding-top: 50px;
 }
 h1{
+  margin-bottom: 5px;
   color: #ffffff;
+  text-align: center;
 }
 
 
-input[type="text"] {
+input[name="mesa"] {
     width: 100%; /* Ajustado para caber melhor em telas de tablet */
     height: 10vh;
     padding: 10px;
@@ -32,15 +34,45 @@ input[type="text"] {
     box-sizing: border-box;
     border-color: #ffffff;
     border-width: 5px;
+    border-radius: 15px 15px 0px 0px;
     font-size: 40px;
     color: #ffffff; /*cor do texto*/
     background: #cccccc;
   }
-  button[type="submit"] {
+
+  input[name="senha"] {
+    width: 100%; /* Ajustado para caber melhor em telas de tablet */
+    height: 10vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-radius: 0px 0px 15px 15px;
+    font-size: 40px;
+    color: #ffffff; /*cor do texto*/
+    background: #cccccc;
+  }
+  button {
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    background-color: #cccccc;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bolder;
+    padding: 15px 30px; /* Aumento do tamanho dos botões */
+    border: none;
+    border-radius: 0px 30px 0px 30px;
+    margin: 40px;
+    text-decoration: none;
+  }
+  label{
+    font-size: 40px;
+
     background-color: #D9D9D9;
     color: rgb(0, 0, 0);
     font-size: 24px;
@@ -51,4 +83,5 @@ input[type="text"] {
     margin: 50px;
     text-decoration: none;
     cursor: pointer;
+
   }
