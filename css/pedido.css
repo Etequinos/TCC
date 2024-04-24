@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.pedido-papel{
+    margin: 50px;
+    box-sizing: border-box;
+    height:712px;
+    width: 411px;
+    max-width: 411px;
+    max-height: 712px;
+    background-color: #f6f6f6;
+}
+.triangulo{
+    
+}
