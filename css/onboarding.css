@@ -6,10 +6,10 @@
 
 body {
   background-color: #C08552;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -19,6 +19,7 @@ body {
   margin: 180px auto;
   text-align: center;
   align-items: center;
+  padding-top: 50px;
 }
 .botoes{
   display: flex;
@@ -37,7 +38,7 @@ body {
   padding: 15px 30px; /* Aumento do tamanho dos botões */
   border: none;
   border-radius: 30px;
-  margin: 20px;
+  margin: 10px;
   text-decoration: none;
 }
 

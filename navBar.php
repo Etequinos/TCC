@@ -1,4 +1,19 @@
+<?php include 'conecta.php'; 
 
+
+  $sql = "SELECT * FROM Mesa";
+ $resultado = $conexao->query($sql);
+ if ($resultado->num_rows > 0) {
+    while($row = $resultado->fetch_assoc()) {
+ 
+          echo "Campo1: " . $row["ID"]. " - Campo2: " . $row["Status"]. "<br>";
+          $mesa = $row["ID"];
+     }
+ } else {
+      echo "0 resultados";
+  }
+
+?>
 <head>
     <link rel='stylesheet' href='../css/navbar.css'>
 </head>
@@ -8,7 +23,7 @@
         <div class='nav-mesa'>
             <button class='nav-btn'>
                 <label>
-                    MESA: {mesa}
+                     <?php echo "MESA:" . $mesa ?>
                 </label>
             </button>
         </div>
