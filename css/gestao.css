@@ -46,7 +46,7 @@ h2{
     background: #cccccc;
   }
  
-    button[type="submit"] {
+    button[type="button"] {
     display: flex;
     align-items: center;
     justify-content: center;
