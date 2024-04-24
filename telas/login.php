@@ -20,6 +20,10 @@
             <label for="senha">Senha</label>
             <input type="text" name="senha" id="senha">
             <button type="submit">APLICAR</button>
+            <br><br>
+            <?php
+            echo "<h1 class='erro'>" . $_SESSION['logado'] . "</h1>";
+            ?>
         </form>
     </div>
 

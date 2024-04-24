@@ -26,7 +26,7 @@ h1{
 }
 
 
-input[name="mesa"] {
+input[name="id"] {
     width: 100%; /* Ajustado para caber melhor em telas de tablet */
     height: 10vh;
     padding: 10px;
@@ -84,4 +84,8 @@ input[name="mesa"] {
     text-decoration: none;
     cursor: pointer;
 
+  }
+
+  .erro {
+    color: red;
   }

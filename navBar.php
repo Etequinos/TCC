@@ -1,16 +1,16 @@
 <?php include 'conecta.php'; 
-
+session_start();
 
   $sql = "SELECT * FROM Mesa";
  $resultado = $conexao->query($sql);
  if ($resultado->num_rows > 0) {
     while($row = $resultado->fetch_assoc()) {
  
-          echo "Campo1: " . $row["ID"]. " - Campo2: " . $row["Status"]. "<br>";
+    //      echo "Campo1: " . $row["ID"]. " - Campo2: " . $row["Status"]. "<br>";
           $mesa = $row["ID"];
      }
  } else {
-      echo "0 resultados";
+      // sem resultados
   }
 
 ?>
@@ -23,7 +23,7 @@
         <div class='nav-mesa'>
             <button class='nav-btn'>
                 <label>
-                     <?php echo "MESA:" . $mesa ?>
+                     <?php echo "MESA:" . $_SESSION['ID']; ?>
                 </label>
             </button>
         </div>
