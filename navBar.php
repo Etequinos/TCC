@@ -21,10 +21,15 @@ session_start();
         <img src='../imagens/logo.jpg' alt='Logotipo do restaurante' class='nav-logo'>
         <label class='nav-label'>{Nome do Restaurante}</label>
         <div class='nav-mesa'>
-            <button class='nav-btn'>
+            <button class='nav-btn' onclick="logout()">
                 <label>
                      <?php echo "MESA:" . $_SESSION['ID']; ?>
                 </label>
             </button>
         </div>
     </nav>
+<script>
+    function logout() {
+    window.location.href = "login.php";
+    }
+    </script>
