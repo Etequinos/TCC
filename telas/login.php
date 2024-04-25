@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-    include '../navBar.php';
+    include_once '../navBar.php';
     ?>
     
     <div class="login-container">
