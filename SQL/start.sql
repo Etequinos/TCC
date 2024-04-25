@@ -33,6 +33,13 @@ CREATE TABLE Pedidos (
     FOREIGN KEY (ID_Prato) REFERENCES Pratos(ID)
 );
 
+-- tabela Comanda
+CREATE TABLE Comandas (
+    FOREIGN KEY (ID_Mesa)  REFERENCES Mesa(ID),
+    FOREIGN KEY (Itens) REFERENCES Pratos(Nome),
+    FOREIGN KEY (Valor) REFERENCES Pratos(Valor)
+);
+
 
 
 -- -------------------------------------------------------- --
