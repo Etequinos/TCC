@@ -15,11 +15,11 @@
     <div class="login-container">
         <h1>AREA PARA GESTORES</h1>
         <form action="consulta-login.php" method="post">   
-            <label for="id">Mesa</label>
+            <p>Mesa</p>
             <input type="number" name="id" id="id">
-            <label for="senha">Senha</label>
+            <p for="senha">Senha</p>
             <input type="text" name="senha" id="senha">
-            <button type="submit">APLICAR</button>
+            <button id="add" type="submit">APLICAR</button>
             <br><br>
             <?php
             echo "<h1 class='erro'>" . $_SESSION['logado'] . "</h1>";
