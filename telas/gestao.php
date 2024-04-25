@@ -4,7 +4,7 @@ session_start();
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 use PragmaRX\Google2FA\Google2FA;
 $_g2fa = new Google2FA();
 
@@ -43,14 +43,16 @@ $qrCodeUrl = $_g2fa->getQRCodeUrl(
     <div class="gestao-container">
     <h1>LOGIN</h1>
     <h2>Código</h2>
+    <form method="post">
     <input type="number" name="otp" id="otp">
     <button type="button" value="Verify" onclick="verify_otp();" >Confirmar</button>
+    </form>
     </div>
 
     <script>
     const verify_otp = async () => {
         let otp = document.getElementById('otp').value;
-        fetch('verify.php?otp=' + otp)
+        fetch('../verify.php?otp=' + otp)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
