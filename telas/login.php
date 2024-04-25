@@ -13,20 +13,22 @@
     ?>
     
     <div class="login-container">
-    <h1>AREA PARA GESTORES</h1>
-     <form action="consulta-login.php" method="post">   
-    <label for="id">Mesa</label>
-    <input type="number" name="id" id="id">
-    <label for="senha">Senha</label>
-
-    <input type="text" name="senha" id="senha_input">
-    <button type="submit">APLICAR</button>
-</div>
-
-    <input type="text" name="senha" id="senha">
-    <button type="submit" value="Verify" >Confirmar</button>
-     </form>
+        <h1>AREA PARA GESTORES</h1>
+        <form action="consulta-login.php" method="post">   
+            <label for="id">Mesa</label>
+            <input type="number" name="id" id="id">
+            <label for="senha">Senha</label>
+            <input type="text" name="senha" id="senha">
+            <button type="submit">APLICAR</button>
+            <br><br>
+            <?php
+            echo "<h1 class='erro'>" . $_SESSION['logado'] . "</h1>";
+            ?>
+        </form>
     </div>
+
+     
+
 
 
 </body>

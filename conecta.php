@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
     die("Erro de conexão: " . $conexao->connect_error);
 }
 
-echo "Conexão bem-sucedida";
+//echo "Conexão bem-sucedida";
 
 // anotações do lucas
 //  $sql = "SELECT * FROM mesa";
