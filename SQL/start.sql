@@ -1,57 +1,172 @@
--- Criar a tabela "mesa"
-CREATE TABLE Mesa (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    Status BOOLEAN,
-    Senha VARCHAR(50)
-);
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 26/04/2024 às 21:11
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
--- Criar a tabela "Clientes"
-CREATE TABLE Clientes (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    CPF VARCHAR(11),
-    Fidelidade BOOLEAN
-);
-
--- Criar a tabela "Pratos"
-CREATE TABLE Pratos (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
-    Nome VARCHAR(100),
-    Descricao TEXT,
-    Valor DECIMAL(10, 2),
-    Fidelidade DECIMAL(10, 2),
-    Imagem VARCHAR(255),
-    Ingredientes TEXT
-);
-
--- table Pedidos
-CREATE TABLE Pedidos (
-    ID_Pedido INT AUTO_INCREMENT PRIMARY KEY,
-    ID_Mesa INT,
-    ID_Prato INT,
-    status VARCHAR(50),
-    FOREIGN KEY (ID_Mesa) REFERENCES Mesa(ID),
-    FOREIGN KEY (ID_Prato) REFERENCES Pratos(ID)
-);
-
--- tabela Comanda
-CREATE TABLE Comandas (
-    FOREIGN KEY (ID_Mesa)  REFERENCES Mesa(ID),
-    FOREIGN KEY (Itens) REFERENCES Pratos(Nome),
-    FOREIGN KEY (Valor) REFERENCES Pratos(Valor)
-);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
--- -------------------------------------------------------- --
--- ------COMANDOS TESTE, REMOVER NA VERSÃO DEFINITIVA------ --
--- -------------------------------------------------------- --
+--
+-- Banco de dados: `tcc`
+--
 
+-- --------------------------------------------------------
 
- INSERT INTO `Clientes` (`ID`, `CPF`, `Fidelidade`) VALUES (NULL, '12345678910', '0');
+--
+-- Estrutura para tabela `clientes`
+--
 
-INSERT INTO `Mesa` (`ID`, `Status`, `Senha`) VALUES (NULL, '0', 'senha');
+CREATE TABLE `clientes` (
+  `ID` int(11) NOT NULL,
+  `CPF` varchar(11) DEFAULT NULL,
+  `Fidelidade` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `clientes`
+--
 
--- boolean: 0=false || 1=true
--- comando insert--
---          INSERT INTO `mesa` (`ID`, `Status`, `senha`) VALUES (NULL, '1', 'senha');
+INSERT INTO `clientes` (`ID`, `CPF`, `Fidelidade`) VALUES
+(1, '12345678910', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `mesa`
+--
+
+CREATE TABLE `mesa` (
+  `ID` int(11) NOT NULL,
+  `Status` tinyint(1) DEFAULT NULL,
+  `Senha` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `mesa`
+--
+
+INSERT INTO `mesa` (`ID`, `Status`, `Senha`) VALUES
+(1, 0, 'senha'),
+(2, 0, 'senha');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pedidos`
+--
+
+CREATE TABLE `pedidos` (
+  `ID_Pedido` int(11) NOT NULL,
+  `ID_Mesa` int(11) DEFAULT NULL,
+  `ID_Prato` int(11) DEFAULT NULL,
+  `status` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pratos`
+--
+
+CREATE TABLE `pratos` (
+  `ID` int(11) NOT NULL,
+  `Nome` varchar(100) DEFAULT NULL,
+  `Descricao` text DEFAULT NULL,
+  `Valor` decimal(10,2) DEFAULT NULL,
+  `Fidelidade` decimal(10,2) DEFAULT NULL,
+  `Imagem` varchar(255) DEFAULT NULL,
+  `Ingredientes` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `pratos`
+--
+
+INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Fidelidade`, `Imagem`, `Ingredientes`) VALUES
+(1, 'Prato1', 'Desc Prato 1', 30.00, 20.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão'),
+(2, 'Prato2', 'Desc Prato 2', 40.00, 32.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate');
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices de tabela `mesa`
+--
+ALTER TABLE `mesa`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Índices de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`ID_Pedido`),
+  ADD KEY `ID_Mesa` (`ID_Mesa`),
+  ADD KEY `ID_Prato` (`ID_Prato`);
+
+--
+-- Índices de tabela `pratos`
+--
+ALTER TABLE `pratos`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `mesa`
+--
+ALTER TABLE `mesa`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `ID_Pedido` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `pratos`
+--
+ALTER TABLE `pratos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`ID_Mesa`) REFERENCES `mesa` (`ID`),
+  ADD CONSTRAINT `pedidos_ibfk_2` FOREIGN KEY (`ID_Prato`) REFERENCES `pratos` (`ID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
