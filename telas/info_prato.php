@@ -9,7 +9,7 @@
 <body>
     
 
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/infoPrato.css">
     <title>Document</title>
 
    
@@ -19,6 +19,7 @@
     include_once '../navBar.php';
     include '../conecta.php';    
     ?>
+    <div class="infoPrato-container">
 <?php
 $id = $_GET['id'];
 
@@ -27,21 +28,25 @@ $sql = "SELECT * FROM Pratos WHERE ID = $id";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
-    // Exibe os detalhes do prato
+    // Exibe os dados em cards
     while($row = $result->fetch_assoc()) {
-        echo "<h2>" . $row["Nome"] . "</h2>";
-        echo "<p>Descrição: " . $row["Descricao"] . "</p>";
-        echo "<p>Valor: R$ " . $row["Valor"] . "</p>";
-        echo "<p>Valor com Desconto: " . $row["Fidelidade"] . "</p>";
+        echo "<head>
+        <link rel='stylesheet' href='../css/cardprato.css'>
+        </head>";
+        echo "<div class='card-container'>";
         echo "<img src='" . $row["Imagem"] . "' alt='" . $row["Nome"] . "'>";
-        echo "<p>Ingredientes: " . $row["Ingredientes"] . "</p>";
-        // Exiba outras informações conforme necessário
-   
+        echo "<label for='prato' name='nomeprat'>" . $row["Nome"] . "</label>>";
+        echo "<label for='prato' name='nomeprato'>" . $row["Valor"] . "</label>";
+        echo "<button name='fzr_pedido'>FAZER PEDIDO</button>";
+        echo "<button name='info_pedido'><a href='info_prato.php?id=" . $row["ID"] . "'>INFO</a></button>";
+        echo "</div>";
     }
 } else {
-    echo "Prato não encontrado";
+    echo "0 resultados";
 }
-?>
+    ?>
+    <h1>NOME DO PRATO</h1>
+</div>
 
 </body>
 </html>
