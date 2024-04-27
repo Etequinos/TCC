@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
         </head>";
         echo "<div class='card-container'>";
         echo "<img src='" . $row["Imagem"] . "' alt='" . $row["Nome"] . "'>";
-        echo "<label for='prato' name='nomeprat'>" . $row["Nome"] . "</label>>";
+        echo "<label for='prato' name='nomeprato'>" . $row["Nome"] . "</label>";
         echo "<label for='prato' name='nomeprato'>" . $row["Valor"] . "</label>";
         echo "<button name='fzr_pedido'>FAZER PEDIDO</button>";
         echo "<button name='info_pedido'><a href='info_prato.php?id=" . $row["ID"] . "'>INFO</a></button>";

@@ -20,12 +20,13 @@ img{
     border-radius: 30px;
     margin: 30px;
 }
-label[name="nomeprato"]{
+label[name="nomeprato"],label[name="valor"]{
     font-size: xx-large;
    /* font-weight: bolder; */
     margin: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
+  
 button[name="info_pedido"],button[name="fzr_pedido"] {
 
     display: flex;
