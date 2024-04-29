@@ -12,7 +12,7 @@ body{
 .infoPrato-container{
     display: flex;
     flex-direction: row;
-    background-color: #daa462;
+    background-color: #C08552;
     margin: 14px;
     
     max-height: 750px;
@@ -20,4 +20,19 @@ body{
 img{
     width: 300px;
     height: 300px;
+}
+.informacao{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    background-color: #ce925e;
+    max-height: 700px;
+    width: 67%;
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+}
+label[name="ingredientes"]{
+    font-size: x-large;
 }
