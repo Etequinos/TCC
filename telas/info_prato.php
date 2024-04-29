@@ -40,6 +40,8 @@ if ($result->num_rows > 0) {
         echo "<button name='fzr_pedido'>FAZER PEDIDO</button>";
         echo "";
         echo "</div>";
+        $descricao = $row["Descricao"];
+        $ingredientes = $row["Ingredientes"];
     }
 } else {
     echo "0 resultados";
@@ -49,7 +51,8 @@ if ($result->num_rows > 0) {
     <Div class="informacao">
     <h1>$NOME DO PRATO</h1>
     <div class="">
-    <label for="ingredientes" name="ingredientes">$ingredientes: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, voluptatibus minima, quis maiores ducimus illum cupiditate quaerat incidunt officia natus dolorem id. Itaque, vitae dolores aperiam dicta esse doloribus iure.</label>
+    <label for="ingredientes" name="ingredientes"><?php echo $descricao; ?></label>
+    <?php echo $ingredientes; ?>
     </div>
 </Div>
 </div>
