@@ -18,22 +18,20 @@
 <div id="cpf" >  
   <p>CPF</p>
   </div>
-  <form action="/join-loyalty-club" method="post">
+  <form action="#" method="post">
     <input type="text" id="cpfInput" maxlength="14" name="cpf" placeholder="" required>
   </form>
   <div class="botoes">
   <button type="submit">Confirmar</button>
   <script>
 document.getElementById('cpfInput').addEventListener('input', function (event) {
-  let cpf = event.target.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-
+  let cpf = event.target.value.replace(/\D/g, ''); 
   if (cpf.length > 11) {
-    cpf = cpf.slice(0, 11); // Limita o tamanho do CPF a 11 dígitos
-  }
+    cpf = cpf.slice(0, 11); 
 
-  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o primeiro ponto
-  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); // Adiciona o segundo ponto
-  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
+  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
 
   event.target.value = cpf;
 });
