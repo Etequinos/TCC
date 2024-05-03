@@ -1,0 +1,13 @@
+button[name="editar_gestao"],[name="excluir_gestao"]{
+margin: auto;
+}
+.container{
+    background-color: #f3e9dc;
+    margin: 15px;
+    border-radius: 15px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    width: 1410px;
+    height: 100px;
+}

@@ -6,36 +6,27 @@
     background-color: #f3e9dc;
     margin: 15px;
     border-radius: 15px;
-    display: block;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     width: 1410px;
     height: 100px;
 }
-img{
-    width: 320px;
-    height: 320px;
-    max-width: 320px;
-    max-height: 320px;
-    border-radius: 30px;
-    margin: 30px;
-}
 label[name="nomeprato"]{
     font-size: xx-large;
    /* font-weight: bolder; */
-    margin: 30px;
-    margin-bottom: 10px;
-    position: absolute;
-    left: 23;
+    margin: 5px;
+    display: flex;
+
   }
   
 button[name="editar"] {
 
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    position: absolute;
-    right: 170;
+    flex-direction: row;
+    position: relative;
+    right: 180;
 
     
     color: rgb(0, 0, 0);
@@ -51,18 +42,16 @@ button[name="editar"] {
 
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
-    right: 20;
-
-    
+    justify-content: center;
+    align-items: center;
     color: rgb(0, 0, 0);
     font-size: larger;
     font-weight: bolder;
-    padding: 15px 15px; /* Aumento do tamanho dos botões */
+    /* Aumento do tamanho dos botões */
     border: none;
     border-radius: 30px 30px 30px 30px;
-    margin: 22px;
     text-decoration: none;
   }
   button[name="excluir"]{
