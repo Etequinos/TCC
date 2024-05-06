@@ -23,8 +23,8 @@ if ($result->num_rows > 0) {
         </head>";
         echo "<div class='card-edit-container'>";
         echo "<label for='prato' name='nomeprato'>nome do prato</label>";
-        echo "<button name='excluir'>EXCLUIR</button>";
         echo "<button name='editar'><a href='info_prato.php'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
+        echo "<button name='excluir'>EXCLUIR</button>";
         echo "</div>";
 
 

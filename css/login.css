@@ -60,7 +60,7 @@ input[name="id"] {
     color: #ffffff; /*cor do texto*/
     background: #cccccc;
   }
-  button {
+  button[id="add"] {
 
     display: flex;
     align-items: center;
@@ -76,6 +76,10 @@ input[name="id"] {
     border-radius: 0px 30px 0px 30px;
     margin: 40px;
     text-decoration: none;
+  }
+  
+  button{
+    margin: 40px;
   }
   
   .erro {
