@@ -37,20 +37,15 @@ function validate_cpf($cpf) {
 // Teste de validação de CPF
 $cpf = $_POST["CPF"];
 if (validate_cpf($cpf)) {
-    echo $cpf;
 //pass
  
     $sql = "SELECT * FROM clientes WHERE CPF = '$cpf'";
     $resultado = $conexao->query($sql);
-    echo $resultado->num_rows;
 
     if ($resultado->num_rows > 0) {
         $row = $resultado->fetch_assoc();
         $visitas = $row["Fidelidade"] + 1;
         $ID = $row["ID"];
-        echo $visitas;
-        echo $ID;
-           echo  "pass";
             $sql = "UPDATE clientes SET Fidelidade = $visitas WHERE ID = $ID";
             $resultado = $conexao->query($sql);
      } else {
