@@ -18,13 +18,14 @@
 <div id="cpf" >  
   <p>CPF</p>
   </div>
-  <form action="#" method="post">
-    <input type="text" id="cpfInput" maxlength="14" name="cpf" placeholder="" required>
-  </form>
-  <div class="botoes">
+  <form action="../validaCPF.php" method="post">
+    <input type="text" id="CPF" maxlength="14" name="CPF" placeholder="" required>
   <button type="submit">Confirmar</button>
+</form>
+  <div class="botoes">
+  
   <script>
-document.getElementById('cpfInput').addEventListener('input', function (event) {
+document.getElementById('CPF').addEventListener('input', function (event) {
   let cpf = event.target.value.replace(/\D/g, ''); 
   if (cpf.length > 11) {
     cpf = cpf.slice(0, 11); 
@@ -36,7 +37,7 @@ document.getElementById('cpfInput').addEventListener('input', function (event) {
   event.target.value = cpf;
 });
 </script>
-  <a href="/anonymous-entry" class="button">Entre anonimamente.</a>
+  <a href="home.php" class="button">Entre anonimamente.</a>
 </div>
 
 </body>
