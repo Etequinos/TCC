@@ -6,16 +6,14 @@
     <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 
-   
 </head>
 <body>
-<?php
-    include_once '../navBar.php';
-
-
-
     
-    ?>
+    <h1>Destaques da Semana</h1>
+    
+<?php //Fiz um codigo gigante, não funcionou, dessisti ?>
+
+</script>
 
 </body>
 </html>
