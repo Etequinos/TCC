@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card-container{
+    background-color: #faf2e9;
+    margin: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    height: 650px;
+}
+.card-name{
+    background-color: #8CFC89;
+    margin: 0px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 100px;
+}
+label{
+    font-size: xx-large;
+   /* font-weight: bolder; */
+    margin: 30px;
+    margin-bottom: 15px;
+    align-self: center;
+}
+p{
+    font-size: larger;
+    margin: 30px;
+    margin-bottom: 15px;
+    align-self: baseline;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
