@@ -42,6 +42,7 @@ if ($result->num_rows > 0) {
         echo "</div>";
         $descricao = $row["Descricao"];
         $ingredientes = $row["Ingredientes"];
+        $nome = $row["Nome"];
     }
 } else {
     echo "0 resultados";
@@ -49,7 +50,7 @@ if ($result->num_rows > 0) {
     ?>
     
     <Div class="informacao">
-    <h1>$NOME DO PRATO</h1>
+    <h1><?php echo $nome; ?></h1>
     <div class="">
     <label for="ingredientes" name="ingredientes"><?php echo $descricao; ?></label>
     <?php echo $ingredientes; ?>
