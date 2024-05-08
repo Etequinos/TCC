@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #C08552;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+.pagamento{
+    background-color: #f6f6f6;
+    width: 700px;
+    height: 550px;
+    margin: 15px;
+   border-radius: 0px 0px 25px 25px;
+}
+.titulo{
+    background-color: #ffd3b6;
+    border-radius: 0px 0px 15px 15px;
+    padding: 15px;
+}

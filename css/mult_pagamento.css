@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #C08552;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+.pagamento{
+    background-color: #f6f6f6;
+    width: 700px;
+    height: 550px;
+    margin: 15px;
+   border-radius: 0px 0px 25px 25px;
+}
+.titulo{
+    background-color: #ffd3b6;
+    border-radius: 0px 0px 15px 15px;
+    padding: 15px;
+}
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    font-size: x-large;
+   
+}
+label[class="valores"]{
+    margin: 10px;
+}
+.imagem{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.valorttl{
+    display: flex;
+    
+}
+label[name="valor"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px;
+}
+.numero{
+    display: flex;
+}
+input[name="pessoas"]{
+  
+    margin-left: 220px;
+    width: 41px;
+}
+.valorpessoa{
+    display: flex;
+    
+}
+label[name="dividido"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 220px;
+    
+}
+button[id="add"] {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #cccccc;
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    font-weight: bolder;
+    padding: 15px 30px; /* Aumento do tamanho dos botões */
+    border: none;
+    border-radius: 0px 30px 0px 30px;
+    margin: 40px;
+    text-decoration: none;
+  }
+  .botoes{
+    display: flex;
+  }
