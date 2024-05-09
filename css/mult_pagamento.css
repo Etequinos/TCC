@@ -23,6 +23,9 @@
     background-color: #ffd3b6;
     border-radius: 0px 0px 15px 15px;
     padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .conteudo{
     display: flex;

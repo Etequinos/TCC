@@ -27,27 +27,31 @@
     justify-content: center;
     align-items: center;
 }
-.conteudoqr{
-  margin: 20px;
+.conteudoMAQUINA{
+  margin: 150px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.valor{
-  display: flex;
-  margin: 35px;
+  text-align: center;
   font-size: x-large;
 }
-
-label[name="valor"]{
-  display: flex;
-  justify-content: flex-end;
-  align-self: start;
-  margin-left: 380px;
-}
-label[name="total"]{
-  display: flex;
-  justify-content: flex-start;
-  align-self: start;
- 
-}
+.valor{
+    display: flex;
+    margin: 35px;
+    margin-top: 170px;
+    font-size: x-large;
+  }
+  
+  label[name="valor"]{
+    display: flex;
+    justify-content: flex-end;
+    align-self: start;
+    margin-left: 380px;
+  }
+  label[name="total"]{
+    display: flex;
+    justify-content: flex-start;
+    align-self: start;
+   
+  }
