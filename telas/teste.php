@@ -13,14 +13,18 @@ include_once '../navBar.php';
 include '../conecta.php';
 ?>
 <br>
+<button id="reloadBtn">Recarregar Página</button>
+
+<script>
+    document.getElementById("reloadBtn").addEventListener("click", function() {
+        location.reload();
+    });
+</script>
 <div id="home-container">
 <?php
 $sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos";
 $result = $conexao->query($sql);
-   
-    set_time_limit(0);
-while (true) {
-    // código a ser executado de tempo em tempo
+    
     if ($result->num_rows > 0) {
         // Exibe os dados em cards
         while($row = $result->fetch_assoc()) {
@@ -38,11 +42,6 @@ while (true) {
     } else {
         echo "0 resultados";
     }
-    
-    sleep(10);
-}
-    
-
     ?>
     </div>
 </body>
