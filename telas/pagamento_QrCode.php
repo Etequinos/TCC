@@ -16,11 +16,19 @@
 
     
     ?>
+    <div class="pagamento">
     <div class="titulo">
-<h1>COMPARTILHAR PAGAMENTO</h1>
-</div>
-<div class="pagamento">
+<h1>PAGAR COM PIX</h1>
     </div>
+    <div class="conteudoqr">
+    <img src="../imagens/frame (1).png" alt="">
+    </div>    
+        <div class="valor"> 
+            <label for="" name="total">VALOR TOTAL</label>
+            <label for="" name="valor">$valor</label>
+        </div>
+</div>
+
 
 </body>
 </html>
