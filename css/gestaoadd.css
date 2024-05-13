@@ -12,3 +12,45 @@
     align-items: center;
     overflow: hidden;
   }
+  .container{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5E3023;
+    width: 1200px;
+    height: 100px;
+    color:white;
+    text-align: center;
+    border-radius: 15px;
+    font-size: xx-large;
+  }
+  input{
+    width: 300px;
+    height: 70px;
+    border-radius: 15px;
+  }
+  #nome-div{
+display: flex;
+align-items: center;
+  }
+  #desc-div{
+    display: flex;
+    align-items: center;
+  }
+  #valor-div{
+    display: flex;
+    align-items: center;
+  }
+  #img-div{
+    display: flex;
+    align-items: center;
+  }
+  #ingredientes-div{
+    display: flex;
+    align-items: center;
+  }
