@@ -8,7 +8,6 @@
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-
     width: 400px;
     height: 650px;
 }
@@ -23,7 +22,6 @@
 }
 label{
     font-size: xx-large;
-   /* font-weight: bolder; */
     margin: 30px;
     margin-bottom: 15px;
     align-self: center;
@@ -33,6 +31,7 @@ p{
     margin: 30px;
     margin-bottom: 15px;
     align-self: baseline;
+    display: inline-flex;
 }
 a{
     text-decoration: none;
