@@ -26,7 +26,8 @@ if ($result->num_rows > 0) {
         echo "<head>
         <link rel='stylesheet' href='../css/card-v-salao.css'>
         </head>";
-        echo "<div class='card-container'>";
+        echo "<div class='card-container-v'>";
+// ALGM COMPLETA PFV --- echo "<label for='mesa' name='numeromesa'>" . $row[""] . "</label>";
         echo "<label for='prato' name='nomeprato'>" . $row["Nome"] . "</label>";
         echo "</div>";
     }
