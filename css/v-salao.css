@@ -4,6 +4,8 @@
 }
 body{
     background-color: #C08552;
+    font-family: in
+    ;
 }
 .content{
     display: flex;
@@ -32,21 +34,15 @@ body{
 }
 .card-name-b{
     background-color: #FFD3B6;
-    margin: 0px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 380px;
-    height: 100px;
+    
 }
 .card-name-r{
     background-color: #CB97FF;
-    margin: 0px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 380px;
-    height: 100px;
+    
+}
+.card-name-v{
+  background-color: #97ffa5;
+  
 }
 label{
     font-size: xx-large;
@@ -114,6 +110,22 @@ p{
     stroke: var(--accent-color, #000000);
   }
   
+
+  #cbx1:checked + .check svg {
+    stroke: var(--accent-color, #000000);
+  }
+  
+  #cbx1:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx1:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+  
   #cbx2:checked + .check svg {
     stroke: var(--accent-color, #000000);
   }
@@ -124,6 +136,21 @@ p{
   }
   
   #cbx2:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+  }
+  
+  #cbx3:checked + .check svg {
+    stroke: var(--accent-color, #000000);
+  }
+  
+  #cbx3:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+  }
+  
+  #cbx3:checked + .check svg polyline {
     stroke-dashoffset: 42;
     transition: all 0.2s linear;
     transition-delay: 0.15s;

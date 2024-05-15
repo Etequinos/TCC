@@ -32,7 +32,7 @@
 
             <div id="valor-div">
             <label for="" class="infos">Valor</label>
-            <form action="">
+            
                 <input type="number">
             </form>
             </div>
