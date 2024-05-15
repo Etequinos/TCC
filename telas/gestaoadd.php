@@ -13,39 +13,39 @@
     ?>
 <div class="container">
     <div class="titulo">
-        <label for="" name="titulo">Descrição do Prato</label>
+        <label for="" name="titulo">Gerenciamento de Prato</label>
     </div>
     <div class="atributos-prato">
              <div id="nome-div">
-            <label for="">Nome</label>
+            <label for="" class="infos">Nome</label>
             <form action="">
                 <input type="text">
             </form>
             </div>
 
             <div id="desc-div">
-            <label for="">Descrição</label>
+            <label for="" class="infos">Descrição</label>
             <form action="">
                 <input type="text">
             </form>
             </div>
 
             <div id="valor-div">
-            <label for="">Valor</label>
+            <label for="" class="infos">Valor</label>
             <form action="">
                 <input type="number">
             </form>
             </div>
 
             <div id="img-div">
-            <label for="">Link Img</label>
+            <label for="" class="infos">Link Img</label>
             <form action="">
                 <input type="text">
             </form>
             </div>
 
             <div id="ingredientes-div">
-            <label for="">Ingredientes</label>
+            <label for="" class="infos">Ingredientes</label>
             <form action="">
                 <input type="text">
             </form>

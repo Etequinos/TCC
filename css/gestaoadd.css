@@ -1,56 +1,61 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #C08552;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  flex-direction: column;
   
-  body {
-    background-color: #C08552;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-  }
-  .container{
-    display: flex;
-    flex-direction: column;
-    
-  }
-  .titulo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5E3023;
-    width: 1200px;
-    height: 100px;
-    color:white;
-    text-align: center;
-    border-radius: 15px;
-    font-size: xx-large;
-  }
-  input{
-    width: 300px;
-    height: 70px;
-    border-radius: 15px;
-  }
-  #nome-div{
-display: flex;
-align-items: center;
-  }
-  #desc-div{
-    display: flex;
-    align-items: center;
-  }
-  #valor-div{
-    display: flex;
-    align-items: center;
-  }
-  #img-div{
-    display: flex;
-    align-items: center;
-  }
-  #ingredientes-div{
-    display: flex;
-    align-items: center;
-  }
+}
+.atributos-prato{
+  background-color: rgb(255, 255, 255);
+}
+.titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5E3023;
+  width: 1200px;
+  height: 100px;
+  color:white;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 40px;
+}
+form{
+  display: flex;
+  justify-content: end;
+}
+input{
+  display: flex;
+  justify-content: end;
+  width: 800px;
+  height: 70px;
+  border-radius: 15px;
+  font-size: x-large;
+ 
+}
+
+#nome-div, #desc-div, #valor-div, #img-div, #ingredientes-div{
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  margin: 25px;
+  padding: 20px;
+  background-color: rgb(236, 236, 236);
+  border-radius: 15px;
+}
+label[class="infos"]{
+  margin: 15px;
+  font-size: 37px;
+}
