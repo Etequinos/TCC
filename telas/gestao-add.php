@@ -10,6 +10,11 @@
 <body>
 <?php
     include_once '../navBar.php';
+
+    include '../conecta.php';
+    ?>
+    <?php
+    $id = $_GET['id']; // Supondo que você passou o ID do registro pela URL
     ?>
 <div class="container">
     <div class="titulo">
