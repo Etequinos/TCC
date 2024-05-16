@@ -23,7 +23,12 @@ session_start();
         <div class='nav-mesa'>
             <button class='nav-btn' onclick="logout()">
                 <label>
-                     <?php echo "MESA:" . $_SESSION['ID']; ?>
+                     <?php 
+                     if(isset($_SESSION['mensagem'])){
+                    echo "Sem login"; 
+                     } else {
+                        echo "MESA:" . $_SESSION['ID'];
+                     } ?>
                 </label>
             </button>
         </div>
