@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
         <link rel='stylesheet' href='../css/card-edit.css'>
         </head>";
         echo "<div class='card-edit-container'>";
-        echo "<label for='prato' name='nomeprato'>nome do prato</label>";
+        echo "<label for='prato' name='nomeprato'>".$row["Nome"]."</label>";
         echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
         echo "<button name='excluir'>EXCLUIR</button>";
         echo "</div>";
