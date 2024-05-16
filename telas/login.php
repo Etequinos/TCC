@@ -18,7 +18,7 @@
             <p>Mesa</p>
             <input type="number" name="id" id="id">
             <p for="senha">Senha</p>
-            <input type="text" name="senha" id="senha">
+            <input type="password" name="senha" id="senha">
             <button id="add" type="submit">APLICAR</button>
             <br><br>
             <?php
