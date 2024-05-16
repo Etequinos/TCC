@@ -56,28 +56,28 @@
     <div class="atributos-prato">
              <div id="nome-div">
             <label for="" class="infos">Nome</label>
-            <form action="">
-                <input type="text" value="<?php echo $DB_Nome; ?>">
+            <form action="../gestao-salvar.php" method="post">
+                <input type="text" name="nome" value="<?php echo $DB_Nome; ?>">
             </div>
 
             <div id="desc-div">
             <label for="" class="infos">Descrição</label>
-                <input type="text" value="<?php echo $DB_Descricao; ?>">
+                <input type="text" name="descricao" value="<?php echo $DB_Descricao; ?>">
             </div>
 
             <div id="valor-div">
             <label for="" class="infos">Valor</label>
-                <input type="number" value="<?php echo $DB_Valor; ?>">
+                <input type="number" name="valor" value="<?php echo $DB_Valor; ?>">
             </div>
 
             <div id="img-div">
             <label for="" class="infos">Link Img</label>
-                <input type="text" value="<?php echo $DB_Imagem; ?>">
+                <input type="text" name="imagem" value="<?php echo $DB_Imagem; ?>">
             </div>
 
             <div id="ingredientes-div">
             <label for="" class="infos">Ingredientes</label>
-                <input type="text" value="<?php echo $DB_Ingredientes; ?>">
+                <input type="text" name="ingredientes" value="<?php echo $DB_Ingredientes; ?>">
             
             </div>
 
@@ -86,6 +86,7 @@
     
 
 </div>
+<input type="hidden" name="id" value="<?php echo $id; ?>">
 <button type="submit" name="submit">Salvar</button>
 </form>
 
