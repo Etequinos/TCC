@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#C08552;
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 960px;
+}
+#home-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1440px;
+  height: 960px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.texto {
+  position: absolute;
+  margin: 30px;
+  right: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+}
+.valor {
+  position: absolute;
+  bottom: 10px;
+  margin: 30px;
+  left: 10px;
+  color: rgb(0, 0, 0);
+  font-size: 19px;
+}
