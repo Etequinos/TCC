@@ -35,7 +35,7 @@ document.getElementById('CPF').addEventListener('input', function (event) {
   cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
 
   event.target.value = cpf;
-});
+}});
 </script>
   <a href="home.php" class="button">Entre anonimamente.</a>
 </div>

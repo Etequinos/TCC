@@ -14,26 +14,12 @@
     include '../conecta.php';
     ?>
     <?php
-    $id = $_GET['id']; // Supondo que você passou o ID do registro pela URL
 
-    $sql = "SELECT * FROM pratos WHERE ID = $id";
-    $result = $conexao->query($sql);
-    
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $DB_Nome = $row['Nome'];
-        $DB_Descricao = $row['Descricao'];
-        $DB_Valor = $row['Valor'];
-        $DB_Imagem = $row['Imagem'];
-        $DB_Ingredientes = $row['Ingredientes'];
-    } else {
-        echo "Nenhum resultado encontrado";
-    }
     
     ?>
 <div class="container">
     <div class="titulo">
-    <button class="button">
+    <button class="button" id="backBtn">
   <div class="button-box">
     <span class="button-elem">
       <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -51,33 +37,38 @@
     </span>
   </div>
 </button>
+<script>
+    document.getElementById("backBtn").addEventListener("click", function() {
+      window.history.back();
+    });
+</script>
         <label for="" name="titulo">Gerenciamento de Prato</label>
     </div>
     <div class="atributos-prato">
              <div id="nome-div">
             <label for="" class="infos">Nome</label>
-            <form action="">
-                <input type="text" value="<?php echo $DB_Nome; ?>">
+            <form action="../gestao-enviar.php" method="post">
+                <input type="text" name="nome" value="">
             </div>
 
             <div id="desc-div">
             <label for="" class="infos">Descrição</label>
-                <input type="text" value="<?php echo $DB_Descricao; ?>">
+                <input type="text" name="descricao" value="">
             </div>
 
             <div id="valor-div">
             <label for="" class="infos">Valor</label>
-                <input type="number" value="<?php echo $DB_Valor; ?>">
+                <input type="number" name="valor" value="">
             </div>
 
             <div id="img-div">
             <label for="" class="infos">Link Img</label>
-                <input type="text" value="<?php echo $DB_Imagem; ?>">
+                <input type="text" name="imagem" value="">
             </div>
 
             <div id="ingredientes-div">
             <label for="" class="infos">Ingredientes</label>
-                <input type="text" value="<?php echo $DB_Ingredientes; ?>">
+                <input type="text" name="ingredientes" value="">
             
             </div>
 
@@ -86,7 +77,7 @@
     
 
 </div>
-<button type="submit" name="submit">Adicionar</button>
+<button type="submit" name="submit">Salvar</button>
 </form>
 
 
