@@ -33,7 +33,7 @@
     ?>
 <div class="container">
     <div class="titulo">
-    <button class="button">
+    <button class="button" id="backBtn">
   <div class="button-box">
     <span class="button-elem">
       <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -51,6 +51,11 @@
     </span>
   </div>
 </button>
+<script>
+    document.getElementById("backBtn").addEventListener("click", function() {
+      window.history.back();
+    });
+</script>
         <label for="" name="titulo">Gerenciamento de Prato</label>
     </div>
     <div class="atributos-prato">
