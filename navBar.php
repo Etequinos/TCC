@@ -1,4 +1,5 @@
 <?php include 'conecta.php'; 
+include 'config.php';
 session_start();
 
   $sql = "SELECT * FROM Mesa";
@@ -19,7 +20,7 @@ session_start();
 </head>
     <nav class='nav-bar'>
         <img src='../imagens/logo.jpg' alt='Logotipo do restaurante' class='nav-logo'>
-        <label class='nav-label'>{Nome do Restaurante}</label>
+        <label class='nav-label'><?php echo $nome_do_restaurante; ?></label>
         <div class='nav-mesa'>
             <button class='nav-btn' onclick="logout()">
                 <label>
