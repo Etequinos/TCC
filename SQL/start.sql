@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Maio-2024 às 02:35
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.2.0
+-- Tempo de geração: 18/05/2024 às 01:38
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `clientes`
+-- Estrutura para tabela `clientes`
 --
 
 CREATE TABLE `clientes` (
@@ -34,7 +34,7 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `clientes`
+-- Despejando dados para a tabela `clientes`
 --
 
 INSERT INTO `clientes` (`ID`, `CPF`, `Fidelidade`) VALUES
@@ -43,7 +43,7 @@ INSERT INTO `clientes` (`ID`, `CPF`, `Fidelidade`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `comandas`
+-- Estrutura para tabela `comandas`
 --
 
 CREATE TABLE `comandas` (
@@ -57,7 +57,7 @@ CREATE TABLE `comandas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mesa`
+-- Estrutura para tabela `mesa`
 --
 
 CREATE TABLE `mesa` (
@@ -67,7 +67,7 @@ CREATE TABLE `mesa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `mesa`
+-- Despejando dados para a tabela `mesa`
 --
 
 INSERT INTO `mesa` (`ID`, `Status`, `Senha`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `mesa` (`ID`, `Status`, `Senha`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pedidos`
+-- Estrutura para tabela `pedidos`
 --
 
 CREATE TABLE `pedidos` (
@@ -90,7 +90,7 @@ CREATE TABLE `pedidos` (
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `pratos`
+-- Estrutura para tabela `pratos`
 --
 
 CREATE TABLE `pratos` (
@@ -103,25 +103,25 @@ CREATE TABLE `pratos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `pratos`
+-- Despejando dados para a tabela `pratos`
 --
 
 INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Imagem`, `Ingredientes`) VALUES
-(1, 'Prato1', 'Desc Prato 1', '30.00', 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão'),
-(2, 'Prato2', 'Desc Prato 2', '40.00', 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate');
+(1, 'Prato1', 'Desc Prato 1', 30.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão'),
+(2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `clientes`
+-- Índices de tabela `clientes`
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `comandas`
+-- Índices de tabela `comandas`
 --
 ALTER TABLE `comandas`
   ADD PRIMARY KEY (`ID`),
@@ -129,13 +129,13 @@ ALTER TABLE `comandas`
   ADD KEY `ID_Prato` (`ID_Prato`);
 
 --
--- Índices para tabela `mesa`
+-- Índices de tabela `mesa`
 --
 ALTER TABLE `mesa`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Índices para tabela `pedidos`
+-- Índices de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
   ADD PRIMARY KEY (`ID`),
@@ -143,13 +143,13 @@ ALTER TABLE `pedidos`
   ADD KEY `ID_Prato` (`ID_Prato`);
 
 --
--- Índices para tabela `pratos`
+-- Índices de tabela `pratos`
 --
 ALTER TABLE `pratos`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -157,6 +157,12 @@ ALTER TABLE `pratos`
 --
 ALTER TABLE `clientes`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `comandas`
+--
+ALTER TABLE `comandas`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `mesa`
@@ -177,18 +183,18 @@ ALTER TABLE `pratos`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Restrições para despejos de tabelas
+-- Restrições para tabelas despejadas
 --
 
 --
--- Limitadores para a tabela `comandas`
+-- Restrições para tabelas `comandas`
 --
 ALTER TABLE `comandas`
   ADD CONSTRAINT `comandas_ibfk_1` FOREIGN KEY (`ID_Mesa`) REFERENCES `mesa` (`ID`),
   ADD CONSTRAINT `comandas_ibfk_2` FOREIGN KEY (`ID_Prato`) REFERENCES `pratos` (`ID`);
 
 --
--- Limitadores para a tabela `pedidos`
+-- Restrições para tabelas `pedidos`
 --
 ALTER TABLE `pedidos`
   ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`ID_Mesa`) REFERENCES `mesa` (`ID`),
