@@ -1,5 +1,7 @@
 <?php
-
+    include_once '../navBar.php';
+    ?>
+<?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -36,9 +38,7 @@ $qrCodeUrl = $_g2fa->getQRCodeUrl(
     <title>Document</title>
 </head>
 <body>
-<?php
-    include_once '../navBar.php';
-    ?>
+
     <div class="gestao-container">
     <h1>LOGIN</h1>
     <h2>Código</h2>
@@ -56,7 +56,7 @@ $qrCodeUrl = $_g2fa->getQRCodeUrl(
             .then((data) => {
                 console.log(data)
                 if (data.result == true) {
-                    alert("Código correto (PASS)");
+                    window.location.href = "gestao-menu.php";
                 } else{
                     alert("Código incorreto, tente novamente (DENNY ACCESS)");
                 }
