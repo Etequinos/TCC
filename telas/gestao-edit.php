@@ -14,7 +14,7 @@
     include '../conecta.php';
     ?>
     <?php
-    $id = $_GET['id']; // Supondo que você passou o ID do registro pela URL
+    $id = $_GET['id']; 
 
     $sql = "SELECT * FROM pratos WHERE ID = $id";
     $result = $conexao->query($sql);

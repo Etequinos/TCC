@@ -23,12 +23,10 @@
 <?php
 $id = $_GET['id'];
 
-// Consulta os dados do prato com o ID fornecido
 $sql = "SELECT * FROM Pratos WHERE ID = $id";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
-    // Exibe os dados em cards
     while($row = $result->fetch_assoc()) {
         echo "<head>
         <link rel='stylesheet' href='../css/cardprato.css'>

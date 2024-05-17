@@ -19,7 +19,6 @@ $sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
-    // Exibe os dados em cards
     while($row = $result->fetch_assoc()) {
         echo "<head>
         <link rel='stylesheet' href='../css/cardprato.css'>
