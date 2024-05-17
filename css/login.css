@@ -85,4 +85,18 @@ input[name="id"] {
   .erro {
     color: red;
   }
-  
+  a[name="add"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    margin: 10px;
+    font-family: ARIAL;
+    font-weight: bold;
+}

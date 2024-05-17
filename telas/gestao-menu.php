@@ -32,8 +32,20 @@ if ($result->num_rows > 0) {
     echo "0 resultados";
 }
 
+
+
+
+
+        
+        
+    
     
     ?>  
+<a href="gestao-add.php" class="button" name="add">ADICIONAR PRATO</a>
+
+    
+    ?>  
+
 
 
 </body>
