@@ -39,10 +39,14 @@
     </div>
     <div class="botoes">
     <button id="add" type="button"><a href="gestao-menu.php">CANCELAR</a></button>
+
+    <!--necessário para deletar-->
     <form action="../gestao-delete-script.php" method="post">
         <input type="hidden" name="id" value="<?php echo $id ?>">
     <button id="add" type="submit">EXCLUIR</button>
     </form>
+    <!--Final do DELETE-->
+    
 </div>
 </body>
 </html>
