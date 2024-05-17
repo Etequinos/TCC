@@ -24,16 +24,14 @@ if ($result->num_rows > 0) {
         echo "<div class='card-edit-container'>";
         echo "<label for='prato' name='nomeprato'>".$row["Nome"]."</label>";
         echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
-        echo "<button name='excluir'>EXCLUIR</button>";
+        echo "<button name='excluir' onclick='exibirAlerta()' >EXCLUIR</button>";
         echo "</div>";
-
-
-
 
     }
 } else {
     echo "0 resultados";
 }
+
 
 
 
@@ -44,5 +42,11 @@ if ($result->num_rows > 0) {
     
     ?>  
 <a href="gestao-add.php" class="button" name="add">ADICIONAR PRATO</a>
+
+    
+    ?>  
+
+
+
 </body>
 </html>
