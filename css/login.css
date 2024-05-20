@@ -100,3 +100,7 @@ input[name="id"] {
     font-family: ARIAL;
     font-weight: bold;
 }
+.botoes{
+  display: flex;
+}
+/*-------------------------------------------------------------------*/

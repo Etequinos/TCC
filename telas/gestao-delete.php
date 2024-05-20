@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/mult_pagamento.css">
+
+    <link rel="stylesheet" href="../css/gestao-delete.css">
+
     <title>Document</title>
 
    
@@ -13,6 +15,23 @@
     include_once '../navBar.php';
     include '../conecta.php';   
     $id = $_GET['id'];
+
+
+    
+    ?>  
+    <div class="container">
+        <div class="titulo">
+        <h1>Confirmar exclusão</h1>
+        </div>
+        <div class="content">
+        <label for="" name="confirma">Tem certeza que deseja excluir?</label>
+        <div class="botoes">
+        <button type="submit" name="submit">CANCELAR</button>
+        <button type="submit" name="excluir">EXCLUIR</button>
+        </div>
+      </div>
+    </div>
+    
 
     $sql = "SELECT * FROM pratos WHERE ID = $id";
     $result = $conexao->query($sql);
@@ -25,15 +44,7 @@
     }
 
     ?>
-    <div class="pagamento">
-        <div class="titulo">
-<h1>EXLUIR UM PRATO</h1>
-</div>
-<div class="conteudo">
-<h3>Você REALMENTE deseja excluir o prato:</h3>
-<p><?php echo $DB_Nome;?></p>
-<h4>ESSA AÇÃO É IRREVERSIVÉL, TOME CUIDADO</h4>
-</div>
+
 
 </div>
     </div>
