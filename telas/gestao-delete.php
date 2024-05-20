@@ -31,6 +31,8 @@
     }
 
     ?>  
+    
+    <form method="post" action="../gestao-delete-script.php">
     <div class="container">
         <div class="titulo">
         <h1>Confirmar exclusão</h1>
@@ -38,8 +40,7 @@
         <div class="content">
         <label for="" name="confirma">Tem certeza que deseja excluir?</label>
         <div class="botoes">
-            <form method="post" action="../gestao-delete-script.php">
-                <button type="button" name="submit">CANCELAR</button>
+                <button type="button" name="submit" onclick="window.location.href='gestao-menu.php'">CANCELAR</button>
                 <button type="submit" name="excluir">EXCLUIR</button>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
             </form>
