@@ -26,7 +26,7 @@ $resultado = mysqli_query($conexao, $sql);
 $sql = "INSERT INTO comandas (ID, ID_Mesa, ID_Prato, Valor_Total, Fidelidade) VALUES (NULL, '$mesa_ID', '$prato_ID', '$prato_Valor', 0);";
 $resultado = mysqli_query($conexao, $sql);
 
-
+header("Location: pedido_enviado.php");
 ?>
 
 

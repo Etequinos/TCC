@@ -4,11 +4,14 @@
     
 }
 body{
+  
     background-color: #C08552;
     font-family: "Jomhuria", serif;
+    width: 1440px;
 }
 .content{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card-container{
@@ -19,6 +22,7 @@ body{
     flex-direction: column;
     width: 380px;
     height: 620px;
+    
 }
 .jomhuria-regular {
   font-family: "Jomhuria", serif;
