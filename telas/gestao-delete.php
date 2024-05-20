@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/gestao-delete.css">
     <title>Document</title>
 
    
@@ -19,7 +19,19 @@ $result = $conexao->query($sql);
 
     
     ?>  
-
+    <div class="container">
+        <div class="titulo">
+        <h1>Confirmar exclusão</h1>
+        </div>
+        <div class="content">
+        <label for="" name="confirma">Tem certeza que deseja excluir?</label>
+        <div class="botoes">
+        <button type="submit" name="submit">CANCELAR</button>
+        <button type="submit" name="excluir">EXCLUIR</button>
+        </div>
+      </div>
+    </div>
+    
 
 </body>
 </html>

@@ -28,11 +28,11 @@
   </div>
 
   <div class="mySlides fade">
-    <img src="../imagens/pao.jpg" style="width:100%;">
+    <img src="../imagens/dia.png" style="width:100%;">
   </div>
 
   <div class="mySlides fade">
-    <img src="../imagens/coca.jpg" style="width:100%;">
+    <img src="../imagens/cardapio.png" style="width:100%;">
   </div>
 </div>
 

@@ -9,9 +9,14 @@
    
 </head>
 <body>
+
+</script>
 <?php
     include_once '../navBar.php';
+    ?>
+   
 
+    <?php
     $sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos";
 $result = $conexao->query($sql);
 
@@ -24,7 +29,9 @@ if ($result->num_rows > 0) {
         echo "<div class='card-edit-container'>";
         echo "<label for='prato' name='nomeprato'>".$row["Nome"]."</label>";
         echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
-        echo "<button name='excluir' onclick='exibirAlerta()' >EXCLUIR</button>";
+        echo "<form action='gestao-delete.php?id=" . $row["ID"] . "'>";
+        echo "<button name='excluir' href>EXCLUIR</button>";
+        echo "</form>";
         echo "</div>";
 
     }
@@ -41,12 +48,17 @@ if ($result->num_rows > 0) {
     
     
     ?>  
+    <div class="botoes">
+<a href="login.php" class="button" name="add">SAIR</a>
 <a href="gestao-add.php" class="button" name="add">ADICIONAR PRATO</a>
-
+</div>
     
-    ?>  
 
 
-
+<script>
+    document.getElementById("backBtn").addEventListener("click", function() {
+      window.history.back();
+    });
+</script>
 </body>
 </html>
