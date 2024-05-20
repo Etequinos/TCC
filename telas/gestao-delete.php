@@ -18,21 +18,8 @@
 
 
     
-    ?>  
-    <div class="container">
-        <div class="titulo">
-        <h1>Confirmar exclusão</h1>
-        </div>
-        <div class="content">
-        <label for="" name="confirma">Tem certeza que deseja excluir?</label>
-        <div class="botoes">
-        <button type="submit" name="submit">CANCELAR</button>
-        <button type="submit" name="excluir">EXCLUIR</button>
-        </div>
-      </div>
-    </div>
-    
-
+    ?>
+    <?php
     $sql = "SELECT * FROM pratos WHERE ID = $id";
     $result = $conexao->query($sql);
 
@@ -43,21 +30,40 @@
         echo "Nenhum resultado encontrado";
     }
 
-    ?>
+    ?>  
+    <div class="container">
+        <div class="titulo">
+        <h1>Confirmar exclusão</h1>
+        </div>
+        <div class="content">
+        <label for="" name="confirma">Tem certeza que deseja excluir?</label>
+        <div class="botoes">
+            <form method="post" action="../gestao-delete-script.php">
+                <button type="button" name="submit">CANCELAR</button>
+                <button type="submit" name="excluir">EXCLUIR</button>
+                <input type="hidden" name="id" value="<?php echo $id ?>">
+            </form>
+        </div>
+      </div>
+    </div>
+    
 
 
-</div>
+
+<!--
+    </div>
     </div>
     <div class="botoes">
     <button id="add" type="button"><a href="gestao-menu.php">CANCELAR</a></button>
 
-    <!--necessário para deletar-->
+    necessário para deletar
     <form action="../gestao-delete-script.php" method="post">
         <input type="hidden" name="id" value="<?php echo $id ?>">
     <button id="add" type="submit">EXCLUIR</button>
     </form>
-    <!--Final do DELETE-->
+    Final do DELETE
     
 </div>
+-->
 </body>
 </html>
