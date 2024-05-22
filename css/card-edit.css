@@ -60,4 +60,7 @@ button[name="editar"] {
     text-decoration: none;
     color: black;
 }
-  
+a[name="branco"] {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
