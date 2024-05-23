@@ -12,7 +12,7 @@
 
     <div class="content">
         <?php
-        $sql = "SELECT * FROM pedidos";
+        $sql = "SELECT * FROM pedidos WHERE Status = 1";
         $result_pedidos = $conexao->query($sql);
 
         if ($result_pedidos->num_rows > 0) {
@@ -24,6 +24,7 @@
                 
                 $sql_prato = "SELECT * FROM pratos WHERE ID = '$pedido_prato_ID'";
                 $result_pratos = $conexao->query($sql_prato);
+
                 $row_prato = $result_pratos->fetch_assoc();
                 $prato_ID = $row_prato['ID'];
                 $prato_Nome = $row_prato['Nome'];
@@ -31,9 +32,7 @@
 
                 echo "<div class='card-container'>
                         <div class='card-name-v'>
-                            <form method='post' action='v-cozinha-delete.php'>
-                                <button type='submit'>CONCLUIR</button>
-                            </form>
+                                <a href='v-cozinha-delete.php?id=" . $pedido_ID . "'>CONCLUIR</a>
                             <div class='container'>
                         </div>
                     </div>
@@ -45,4 +44,14 @@
         }
         ?>
     </div>
+    <script>
+
+function recarregarPagina() {
+    setTimeout(function() {
+        location.reload();
+    }, 15000); // milisegundos
+}
+recarregarPagina();
+
+    </script>
 </body>
