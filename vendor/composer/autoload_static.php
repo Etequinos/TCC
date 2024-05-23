@@ -4,13 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb
+class ComposerStaticInit52ad3efead0be6ca9d7cf9fffb14302e
 {
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
             'PragmaRX\\Google2FA\\' => 19,
             'ParagonIE\\ConstantTime\\' => 23,
+        ),
+        'M' => 
+        array (
+            'MercadoPago\\' => 12,
         ),
         'D' => 
         array (
@@ -31,6 +35,10 @@ class ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
+        'MercadoPago\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mercadopago/dx-php/src/MercadoPago',
+        ),
         'DASPRiD\\Enum\\' => 
         array (
             0 => __DIR__ . '/..' . '/dasprid/enum/src',
@@ -48,9 +56,9 @@ class ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit961b1f001b62e10aa4b0c13f23c3f0fb::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit52ad3efead0be6ca9d7cf9fffb14302e::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit52ad3efead0be6ca9d7cf9fffb14302e::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit52ad3efead0be6ca9d7cf9fffb14302e::$classMap;
 
         }, null, ClassLoader::class);
     }

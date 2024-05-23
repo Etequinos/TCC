@@ -10,7 +10,16 @@
 <?php
 include_once '../navBar.php';
 ?>
-    
+    <script>
+
+    function redirecionar() {
+        window.location.href = "home.php"; 
+    }
+
+    window.onload = function() {
+        setTimeout(redirecionar, 5000); //milissegundos
+    };
+</script>
 <h1>SEU PEDIDO FOI ENVIADO!!!</h1>
 </body>
 </html>
