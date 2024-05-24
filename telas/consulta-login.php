@@ -23,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
         exit; 
     } else {
         session_start();
-        $_SESSION['ID'] = "sem login";
         $_SESSION['logado'] = "Número da mesa ou senha incorretos";
         echo "ID ou senha incorretos. Tente novamente.";
         header("Location: login.php");

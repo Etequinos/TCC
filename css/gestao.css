@@ -20,7 +20,11 @@ body{
     align-items: center;
     padding-top: 50px;
 }
+button[name="confirma"]{
+    display: flex;
+    justify-content: center;
 
+}
 h1{
     color: #ffffff;
     margin: 20px;

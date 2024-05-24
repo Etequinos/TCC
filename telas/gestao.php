@@ -44,7 +44,7 @@ $qrCodeUrl = $_g2fa->getQRCodeUrl(
     <h2>Código</h2>
     <form method="post">
     <input type="number" name="otp" id="otp">
-    <button type="button" value="Verify" onclick="verify_otp();" >Confirmar</button>
+    <button type="button" name="confirma" value="Verify" onclick="verify_otp();" >Confirmar</button>
     </form>
     </div>
 
