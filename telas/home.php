@@ -15,7 +15,7 @@ include '../conecta.php';
 <br>
 <div id="home-container">
 <?php
-$sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos";
+$sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos WHERE status = '0'";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {

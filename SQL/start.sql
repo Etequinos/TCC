@@ -99,16 +99,17 @@ CREATE TABLE `pratos` (
   `Descricao` text DEFAULT NULL,
   `Valor` decimal(10,2) DEFAULT NULL,
   `Imagem` varchar(255) DEFAULT NULL,
-  `Ingredientes` text DEFAULT NULL
+  `Ingredientes` text DEFAULT NULL,
+   `status` varchar(50) DEFAULT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Despejando dados para a tabela `pratos`
 --
 
-INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Imagem`, `Ingredientes`) VALUES
-(1, 'Prato1', 'Desc Prato 1', 30.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão'),
-(2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate');
+INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Imagem`, `Ingredientes`, `status`) VALUES
+(1, 'Prato1', 'Desc Prato 1', 30.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão', '0'),
+(2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate', '0');
 
 --
 -- Índices para tabelas despejadas

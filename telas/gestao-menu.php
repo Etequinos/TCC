@@ -17,7 +17,7 @@
    
 
     <?php
-    $sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos";
+    $sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos WHERE status = '0'";
 $result = $conexao->query($sql);
 
 if ($result->num_rows > 0) {
@@ -30,7 +30,31 @@ if ($result->num_rows > 0) {
         echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
 
 
-        echo "<button name='excluir'><a name='branco'href='gestao-delete.php?id=" . $row["ID"] . "'>EXCLUIR</a></button>";
+        echo "<button name='excluir'><a name='branco'href='gestao-delete.php?id=" . $row["ID"] . "'>DESATIVAR</a></button>";
+
+        echo "</div>";
+
+    }
+} else {
+    echo "0 resultados";
+}
+?>
+<h1>PRATOS DESATIVADOS</h1>
+<?php
+$sql = "SELECT ID, Nome, Valor, Imagem FROM Pratos WHERE status = '1'";
+$result = $conexao->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<head>
+        <link rel='stylesheet' href='../css/card-edit.css'>
+        </head>";
+        echo "<div class='card-edit-container'>";
+        echo "<label for='prato' name='nomeprato'>".$row["Nome"]."</label>";
+        echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
+
+
+        echo "<button name='excluir'><a name='branco'href='gestao-ativar.php?id=" . $row["ID"] . "'>ATIVAR</a></button>";
 
         echo "</div>";
 
