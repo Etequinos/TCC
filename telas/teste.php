@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,7 @@ require 'vendor/autoload.php';
 
 </body>
 </html>
-=======
+
 <?php
 require_once 'vendor/autoload.php';
 
@@ -92,4 +92,4 @@ $qrCodeImage = $writer->write($qrCode);
 header('Content-Type: '.$qrCodeImage->getMimeType());
 echo $qrCodeImage->getString();
 ?>
->>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
+
