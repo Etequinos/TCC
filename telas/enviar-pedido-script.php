@@ -7,10 +7,14 @@ $sql = "SELECT * FROM pratos WHERE ID = $id";
 $resultado = mysqli_query($conexao, $sql);
 if ($resultado->num_rows > 0) {
     $row = $resultado->fetch_assoc();
-
+$status = $row["status"];
 $prato_ID = $row["ID"];
 $prato_Nome = $row["Nome"];
 $prato_Valor = $row["Valor"];
+
+    if ($status == '1'){
+        header('Location: home.php');
+    }
 }
 
 session_start();
