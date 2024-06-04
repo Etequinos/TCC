@@ -24,19 +24,7 @@
 </form>
   <div class="botoes">
   
-  <script>
-document.getElementById('CPF').addEventListener('input', function (event) {
-  let cpf = event.target.value.replace(/\D/g, ''); 
-  if (cpf.length > 11) {
-    cpf = cpf.slice(0, 11); 
 
-  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
-  cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2'); 
-  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); 
-
-  event.target.value = cpf;
-}});
-</script>
   <a href="home.php" class="button">Entre anonimamente.</a>
 </div>
 

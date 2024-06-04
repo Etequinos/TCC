@@ -2,6 +2,8 @@
     "require": {
         "pragmarx/google2fa": "^8.0",
         "bacon/bacon-qr-code": "^3.0",
-        "endroid/qr-code": "^5.0"
+        "endroid/qr-code": "^5.0",
+        "chillerlan/php-qrcode": "^5.0"
+
     }
 }
