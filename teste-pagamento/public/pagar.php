@@ -1,6 +1,6 @@
 <?php
 
-$endpoint = 'https://sandbox.api.pagseguro.com/orders';
+$endpoint = 'https://sandbox.api.pagseguro.com/pix/pay/QRCO_56C1AE63-5223-4D98-B0DB-B275E4A5CA48';
 $token = '0738CF4178A54649A08F76F9C56A9B02';
 
 $body = [
@@ -56,7 +56,7 @@ curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($body));
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
-  'Content-Type:application/json',
+  'Content-Type: application/json',
   'Authorization: Bearer ' . $token
 ]);
 
@@ -87,9 +87,7 @@ var_dump($data['qr_codes'][0]);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body><h1>
-<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>
-</h1>
+<body>
   <?php
   if($data) :
   ?>

@@ -4,37 +4,22 @@
 
 namespace Composer\Autoload;
 
-<<<<<<< HEAD
-class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
-=======
 class ComposerStaticInit5710a65e52d0e6142d79750415953609
->>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
 {
-    public static $files = array (
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-    );
-
     public static $prefixLengthsPsr4 = array (
+        'c' => 
+        array (
+            'chillerlan\\Settings\\' => 20,
+            'chillerlan\\QRCode\\' => 18,
+        ),
         'P' => 
         array (
-            'Psr\\Http\\Message\\' => 17,
-            'Psr\\Http\\Client\\' => 16,
             'PragmaRX\\Google2FA\\' => 19,
             'ParagonIE\\ConstantTime\\' => 23,
         ),
-<<<<<<< HEAD
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-            'GuzzleHttp\\Promise\\' => 19,
-            'GuzzleHttp\\' => 11,
-=======
         'E' => 
         array (
             'Endroid\\QrCode\\' => 15,
->>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         ),
         'D' => 
         array (
@@ -47,14 +32,13 @@ class ComposerStaticInit5710a65e52d0e6142d79750415953609
     );
 
     public static $prefixDirsPsr4 = array (
-        'Psr\\Http\\Message\\' => 
+        'chillerlan\\Settings\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/chillerlan/php-settings-container/src',
         ),
-        'Psr\\Http\\Client\\' => 
+        'chillerlan\\QRCode\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-client/src',
+            0 => __DIR__ . '/..' . '/chillerlan/php-qrcode/src',
         ),
         'PragmaRX\\Google2FA\\' => 
         array (
@@ -64,23 +48,9 @@ class ComposerStaticInit5710a65e52d0e6142d79750415953609
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
-<<<<<<< HEAD
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
-        ),
-        'GuzzleHttp\\Promise\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
-        ),
-        'GuzzleHttp\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
-=======
         'Endroid\\QrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/endroid/qr-code/src',
->>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         ),
         'DASPRiD\\Enum\\' => 
         array (
@@ -99,15 +69,9 @@ class ComposerStaticInit5710a65e52d0e6142d79750415953609
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-<<<<<<< HEAD
-            $loader->prefixLengthsPsr4 = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$classMap;
-=======
             $loader->prefixLengthsPsr4 = ComposerStaticInit5710a65e52d0e6142d79750415953609::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit5710a65e52d0e6142d79750415953609::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit5710a65e52d0e6142d79750415953609::$classMap;
->>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
 
         }, null, ClassLoader::class);
     }

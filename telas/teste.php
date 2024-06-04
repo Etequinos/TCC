@@ -1,95 +1,49 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
-require 'vendor/autoload.php';
 
-
-?>
-
-</body>
-</html>
-
-<?php
-require_once 'vendor/autoload.php';
+// Inclua o arquivo de configuração
+require '../config.php';
+require '../vendor/autoload.php';
 
 use Endroid\QrCode\QrCode;
-use Endroid\QrCode\Writer\PngWriter;
 
-// Função para adicionar campos formatados no payload
-function addField($id, $value) {
-    $size = str_pad(strlen($value), 2, '0', STR_PAD_LEFT);
-    return $id . $size . $value;
-}
+// Gere o texto do payload do PIX
+$payload = '00020101021126500014BR.GOV.BCB.PIX01141' . $beneficiarioChavePix . '520400005303986540512.345802BR5929' . $beneficiarioNome . '6009' . $beneficiarioCidade . '62300593*****6304';
 
-// Função para gerar o payload do Pix
-function generatePixPayload($pixKey, $merchantName, $merchantCity, $amount, $txId) {
-    $pixKey = addField('01', $pixKey);
-    $merchantAccount = '26' . str_pad(strlen($pixKey), 2, '0', STR_PAD_LEFT) . $pixKey;
-    $merchantName = addField('59', $merchantName);
-    $merchantCity = addField('60', $merchantCity);
-    $txId = addField('05', $txId);
-    $amount = addField('54', number_format($amount, 2, '.', ''));
+// Adicione o valor ao payload (formato aceito pelo PIX)
+$payload .= sprintf('54%s05%s', str_pad(strlen($valor), 2, '0', STR_PAD_LEFT), $valor);
 
-    $payload = '000201' .
-               '010212' .
-               '26' . strlen($merchantAccount) . $merchantAccount .
-               '52040000' .
-               '5303986' .
-               $amount .
-               $merchantName .
-               $merchantCity .
-               $txId .
-               '6304'; // CRC placeholder
-
-    // Calcular CRC16
-    $payload .= crc16($payload);
-
-    return $payload;
-}
-
-// Função para calcular CRC16
-function crc16($str) {
-    $crc = 0xFFFF;
-    for ($x = 0; $x < strlen($str); $x++) {
-        $crc ^= ord($str[$x]) << 8;
-        for ($y = 0; $y < 8; $y++) {
-            if (($crc & 0x8000) != 0) {
-                $crc = ($crc << 1) ^ 0x1021;
-            } else {
-                $crc = $crc << 1;
-            }
-        }
-    }
-    return strtoupper(dechex($crc & 0xFFFF));
-}
-
-// Defina os parâmetros do Pix
-$pixKey = '24001140802';
-$merchantName = 'Lucas José Campos da Rocha';
-$merchantCity = 'São Paulo';
-$amount = 10.00; // valor
-$txId = 'ID-de-Transacao'; // ID de transação
-
-// Gerar o payload do Pix
-$payload = generatePixPayload($pixKey, $merchantName, $merchantCity, $amount, $txId);
-
-// Gerar o código QR
+// Crie um objeto QrCode com o payload
 $qrCode = new QrCode($payload);
-$writer = new PngWriter();
-$qrCodeImage = $writer->write($qrCode);
 
-// Salvar o QR code em um arquivo (opcional)
-//$qrCodeImage->saveToFile('qrcode.png');
+// Defina o tamanho do QR code
+$qrCode->setSize(300);
 
-// Exibir diretamente na página web
-header('Content-Type: '.$qrCodeImage->getMimeType());
-echo $qrCodeImage->getString();
-?>
+// Defina o formato da imagem
+$qrCode->setWriterByName('png');
 
+// Salve o QR code em um arquivo temporário
+$tempFilename = tempnam(sys_get_temp_dir(), 'qr_code_');
+$qrCode->writeFile($tempFilename);
+
+// Exiba a imagem diretamente no navegador
+header('Content-Type: image/png');
+readfile($tempFilename);
+
+// Remova o arquivo temporário
+unlink($tempFilename);
+
+
+// Incluir Composer
+
+// Criar a variável com a URL para o QRCode
+
+
+// Imprimir o título
+
+
+// Gerar QRCode: instanciar a classe QRCode e enviar os dados para o render gerar o QRCode
+$qrcode = (new \chillerlan\QRCode\QRCode())->render($payload);
+//var_dump($qrcode);
+
+// Imprimir o QRCode
+echo "<img src='$qrcode'>";
