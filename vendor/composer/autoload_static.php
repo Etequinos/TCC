@@ -4,7 +4,11 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
+=======
+class ComposerStaticInit5710a65e52d0e6142d79750415953609
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -20,11 +24,17 @@ class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
             'PragmaRX\\Google2FA\\' => 19,
             'ParagonIE\\ConstantTime\\' => 23,
         ),
+<<<<<<< HEAD
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+=======
+        'E' => 
+        array (
+            'Endroid\\QrCode\\' => 15,
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         ),
         'D' => 
         array (
@@ -54,6 +64,7 @@ class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
         array (
             0 => __DIR__ . '/..' . '/paragonie/constant_time_encoding/src',
         ),
+<<<<<<< HEAD
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -65,6 +76,11 @@ class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+=======
+        'Endroid\\QrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/endroid/qr-code/src',
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         ),
         'DASPRiD\\Enum\\' => 
         array (
@@ -83,9 +99,15 @@ class ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit5cbc48f21c59ee3ba1f8269c59b8d350::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5710a65e52d0e6142d79750415953609::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5710a65e52d0e6142d79750415953609::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit5710a65e52d0e6142d79750415953609::$classMap;
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
 
         }, null, ClassLoader::class);
     }

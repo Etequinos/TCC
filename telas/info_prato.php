@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
         echo "<img src='" . $row["Imagem"] . "' alt='" . $row["Nome"] . "'>";
         echo "<label for='prato' name='nomeprato'>" . $row["Nome"] . "</label>";
         echo "<label for='prato' name='nomeprato'>" . $row["Valor"] . "</label>";
-        echo "<button name='fzr_pedido'>FAZER PEDIDO</button>";
+        echo "<button name='fzr_pedido'><a href='enviar-pedido-script.php?id=" . $id . "'>FAZER PEDIDO</a></button>";
         echo "";
         echo "</div>";
         $descricao = $row["Descricao"];

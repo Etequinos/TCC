@@ -111,6 +111,7 @@
             "install-path": "../dasprid/enum"
         },
         {
+<<<<<<< HEAD
             "name": "guzzlehttp/guzzle",
             "version": "7.8.1",
             "version_normalized": "7.8.1.0",
@@ -155,6 +156,43 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
+=======
+            "name": "endroid/qr-code",
+            "version": "5.0.9",
+            "version_normalized": "5.0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endroid/qr-code.git",
+                "reference": "3dcdfab4c9122874f3915d8bf80a43b9df11852d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endroid/qr-code/zipball/3dcdfab4c9122874f3915d8bf80a43b9df11852d",
+                "reference": "3dcdfab4c9122874f3915d8bf80a43b9df11852d",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "endroid/quality": "dev-main",
+                "ext-gd": "*",
+                "khanamiryan/qrcode-detector-decoder": "^2.0.2",
+                "setasign/fpdf": "^1.8.2"
+            },
+            "suggest": {
+                "ext-gd": "Enables you to write PNG images",
+                "khanamiryan/qrcode-detector-decoder": "Enables you to use the image validator",
+                "roave/security-advisories": "Makes sure package versions with known security issues are not installed",
+                "setasign/fpdf": "Enables you to use the PDF writer"
+            },
+            "time": "2024-05-08T08:09:28+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "5.x-dev"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
                 }
             },
             "installation-source": "source",
@@ -163,7 +201,11 @@
                     "src/functions_include.php"
                 ],
                 "psr-4": {
+<<<<<<< HEAD
                     "GuzzleHttp\\": "src/"
+=======
+                    "Endroid\\QrCode\\": "src/"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -172,6 +214,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -443,6 +486,32 @@
                 }
             ],
             "install-path": "../guzzlehttp/psr7"
+=======
+                    "name": "Jeroen van den Enden",
+                    "email": "info@endroid.nl"
+                }
+            ],
+            "description": "Endroid QR Code",
+            "homepage": "https://github.com/endroid/qr-code",
+            "keywords": [
+                "code",
+                "endroid",
+                "php",
+                "qr",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/endroid/qr-code/issues",
+                "source": "https://github.com/endroid/qr-code/tree/5.0.9"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/endroid",
+                    "type": "github"
+                }
+            ],
+            "install-path": "../endroid/qr-code"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         },
         {
             "name": "paragonie/constant_time_encoding",

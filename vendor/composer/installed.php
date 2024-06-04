@@ -3,7 +3,11 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
+<<<<<<< HEAD
         'reference' => '3252e1322f4fe3c2274870f3660ebd6d42077a63',
+=======
+        'reference' => 'fef22f73ce66edab2baceb75f370984dfb029b8e',
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +17,11 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
+<<<<<<< HEAD
             'reference' => '3252e1322f4fe3c2274870f3660ebd6d42077a63',
+=======
+            'reference' => 'fef22f73ce66edab2baceb75f370984dfb029b8e',
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -37,6 +45,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
         'guzzlehttp/guzzle' => array(
             'pretty_version' => '7.8.1',
             'version' => '7.8.1.0',
@@ -61,6 +70,14 @@
             'reference' => '45b30f99ac27b5ca93cb4831afe16285f57b8221',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/psr7',
+=======
+        'endroid/qr-code' => array(
+            'pretty_version' => '5.0.9',
+            'version' => '5.0.9.0',
+            'reference' => '3dcdfab4c9122874f3915d8bf80a43b9df11852d',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../endroid/qr-code',
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
             'aliases' => array(),
             'dev_requirement' => false,
         ),

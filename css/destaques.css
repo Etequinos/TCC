@@ -15,7 +15,19 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
-
+h1 {
+  color: white;
+  background-color: rgba(172, 172, 172, 0.6);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 5px solid rgb(194, 194, 194);
+  padding: 6px;
+  border-radius: 15px;
+  text-shadow: 
+ -3px -3px  0 #000,
+  3px -3px  0 #000,
+ -3px  3px  0 #000,
+  3px  3px  0 #000;
+}
 
 
 

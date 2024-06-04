@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "6dafc403be49c2028d3767c4d92dbc9f",
+=======
+    "content-hash": "5710a65e52d0e6142d79750415953609",
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -111,6 +115,7 @@
             "time": "2023-08-25T16:18:39+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "guzzlehttp/guzzle",
             "version": "7.8.1",
             "source": {
@@ -153,6 +158,41 @@
                 "bamarni-bin": {
                     "bin-links": true,
                     "forward-command": false
+=======
+            "name": "endroid/qr-code",
+            "version": "5.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/endroid/qr-code.git",
+                "reference": "3dcdfab4c9122874f3915d8bf80a43b9df11852d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/endroid/qr-code/zipball/3dcdfab4c9122874f3915d8bf80a43b9df11852d",
+                "reference": "3dcdfab4c9122874f3915d8bf80a43b9df11852d",
+                "shasum": ""
+            },
+            "require": {
+                "bacon/bacon-qr-code": "^3.0",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "endroid/quality": "dev-main",
+                "ext-gd": "*",
+                "khanamiryan/qrcode-detector-decoder": "^2.0.2",
+                "setasign/fpdf": "^1.8.2"
+            },
+            "suggest": {
+                "ext-gd": "Enables you to write PNG images",
+                "khanamiryan/qrcode-detector-decoder": "Enables you to use the image validator",
+                "roave/security-advisories": "Makes sure package versions with known security issues are not installed",
+                "setasign/fpdf": "Enables you to use the PDF writer"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "5.x-dev"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
                 }
             },
             "autoload": {
@@ -160,7 +200,11 @@
                     "src/functions_include.php"
                 ],
                 "psr-4": {
+<<<<<<< HEAD
                     "GuzzleHttp\\": "src/"
+=======
+                    "Endroid\\QrCode\\": "src/"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -169,6 +213,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Graham Campbell",
                     "email": "hello@gjcampbell.co.uk",
                     "homepage": "https://github.com/GrahamCampbell"
@@ -434,6 +479,32 @@
                 }
             ],
             "time": "2023-12-03T20:05:35+00:00"
+=======
+                    "name": "Jeroen van den Enden",
+                    "email": "info@endroid.nl"
+                }
+            ],
+            "description": "Endroid QR Code",
+            "homepage": "https://github.com/endroid/qr-code",
+            "keywords": [
+                "code",
+                "endroid",
+                "php",
+                "qr",
+                "qrcode"
+            ],
+            "support": {
+                "issues": "https://github.com/endroid/qr-code/issues",
+                "source": "https://github.com/endroid/qr-code/tree/5.0.9"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/endroid",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-05-08T08:09:28+00:00"
+>>>>>>> 3bcb0a004e5c995c4fed8cfba8dedfa3095b3e5b
         },
         {
             "name": "paragonie/constant_time_encoding",
