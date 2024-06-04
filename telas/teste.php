@@ -47,3 +47,4 @@ $qrcode = (new \chillerlan\QRCode\QRCode())->render($payload);
 
 // Imprimir o QRCode
 echo "<img src='$qrcode'>";
+//
