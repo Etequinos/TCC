@@ -50,7 +50,8 @@ CREATE TABLE `comandas` (
   `ID_Mesa` int(11) DEFAULT NULL,
   `ID_Prato` int(11) DEFAULT NULL,
   `Valor_Total` decimal(10,2) DEFAULT NULL,
-  `Fidelidade` int(10) DEFAULT NULL
+  `Fidelidade` int(10) DEFAULT NULL,
+  `Status` int(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
