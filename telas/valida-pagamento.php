@@ -13,6 +13,9 @@ $mesa_ID = $_SESSION['ID'];
     $sql = "UPDATE mesa SET Status = 0 WHERE ID = $mesa_ID"; 
     $resultado = mysqli_query($conexao, $sql);
 
+    $sql = "UPDATE comandas SET Status = '1' WHERE ID_Mesa = '$mesa_ID' AND Status = '0'";
+    $result = $conexao->query($sql);
+
     header('Location: pagamento-aprovado.php');
     //pass
 } else {

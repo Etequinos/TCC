@@ -31,7 +31,9 @@
             </div>
         </button>
         <h1>RESUMO PEDIDO</h1>
-        <button name="finalizar">FINALIZAR</button>
+        <form action="autorizar-pagamento.php">
+        <button type="submmit" name="finalizar">FINALIZAR</button>
+        </form>
     </div>
 
     <div class="tabela">
@@ -46,7 +48,7 @@
                 <tbody>
                     <?php
                     $mesa = $_SESSION['ID'];
-                    $sql = "SELECT * FROM Comandas WHERE ID_Mesa = '2'";
+                    $sql = "SELECT * FROM Comandas WHERE ID_Mesa = '$mesa' AND Status = '0'";
                     $result = $conexao->query($sql);
                     $total = 0; 
 

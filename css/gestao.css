@@ -49,6 +49,20 @@ h2{
     color: #ffffff; /*cor do texto*/
     background: #cccccc;
   }
+  input[type="password"] {
+    width: 100%; /* Ajustado para caber melhor em telas de tablet */
+    height: 10vh;
+    margin: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-radius: 15px 5px 15px 5px;
+    font-size: 40px;
+    color: #ffffff; /*cor do texto*/
+    background: #cccccc;
+  }
  
     button[type="button"] {
     display: flex;
