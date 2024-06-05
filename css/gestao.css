@@ -66,6 +66,22 @@ h2{
     text-decoration: none;
     cursor: pointer;
   }
+  button[type="submmit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bolder;
+    padding: 25px 50px; /* Aumento do tamanho dos botões */
+    border: none;
+    border-radius: 30px;
+    margin: 50px;
+    text-decoration: none;
+    cursor: pointer;
+  }
   form{
     display: flex;
     flex-direction: column;
