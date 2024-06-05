@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div>
-                        <h1>Messa: " . $pedido_Mesa_ID . "</h1>
+                        <h1>Mesa: " . $pedido_Mesa_ID . "</h1>
                         <p>Prato: </p>" . $prato_Nome . "
                     </div>
                 </div>";

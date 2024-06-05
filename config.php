@@ -1,14 +1,7 @@
 <?php
-$nome_do_restaurante = "ETEQUINOS food";
+$nome_do_restaurante = "ETEQUINOS food"; // aparecerá na navbar do sistema
+$senha_salao = "senhasalao"; // será usada por atendentes para liberar a mesa após pagamento
 
-
-// Informações do beneficiário (você)
-$beneficiarioNome = "Lucas José Campos da Rocha";
-$beneficiarioCidade = "São Paulo";
-$beneficiarioChavePix = "24001140802"; // Pode ser um e-mail, telefone, CPF, etc.
-
-// Informações do pagamento
-$valor = 100.50; // Substitua pelo valor que deseja cobrar
 
 // teste: https://dev.pagbank.uol.com.br/reference/introducao-checkout
 ?>
