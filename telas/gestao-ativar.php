@@ -41,7 +41,7 @@
         <label for="" name="confirma">Tem certeza que deseja ATIVAR?</label>
         <div class="botoes">
                 <button type="button" name="submit" onclick="window.location.href='gestao-menu.php'">CANCELAR</button>
-                <button type="submit" name="excluir">ATIVAR</button>
+                <button type="submit" name="ativa">ATIVAR</button>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
             </form>
         </div>

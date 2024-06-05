@@ -54,7 +54,7 @@ if ($result->num_rows > 0) {
         echo "<button name='editar'><a href='gestao-edit.php?id=" . $row["ID"] . "'><i class='fa-regular fa-pen-to-square'></i>EDITAR</a></button>";
 
 
-        echo "<button name='excluir'><a name='branco'href='gestao-ativar.php?id=" . $row["ID"] . "'>ATIVAR</a></button>";
+        echo "<button name='ativa'><a name='branco'href='gestao-ativar.php?id=" . $row["ID"] . "'>ATIVAR</a></button>";
 
         echo "</div>";
 
