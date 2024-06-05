@@ -19,7 +19,7 @@
   <p>CPF</p>
   </div>
   <form action="../validaCPF.php" method="post">
-    <input type="text" id="CPF" maxlength="14" name="CPF" placeholder="" required>
+    <input type="text" id="CPF" maxlength="14" name="CPF" placeholder="" required oninput="formatarCPF(this)">
   <button type="submit">Confirmar</button>
 </form>
   <div class="botoes">
@@ -27,6 +27,12 @@
 
   <a href="home.php" class="button">Entre anonimamente.</a>
 </div>
-
+<script>
+        function formatarCPF(cpfInput) {
+            let cpf = cpfInput.value.replace(/[^\d]/g, '');
+            cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            cpfInput.value = cpf;
+        }
+    </script>
 </body>
 </html>

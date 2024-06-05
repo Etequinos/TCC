@@ -48,7 +48,7 @@
                     $mesa = $_SESSION['ID'];
                     $sql = "SELECT * FROM Comandas WHERE ID_Mesa = '2'";
                     $result = $conexao->query($sql);
-                    $total = 0; // Inicialize a variável total para armazenar a soma
+                    $total = 0; 
 
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -58,7 +58,7 @@
                             $fidelidade = $row['Fidelidade'];
 
                             $sql_pratos = "SELECT * FROM Pratos WHERE ID = $ID_Prato";
-                            $result_pratos = $conexao->query($sql_pratos); // Renomeada a variável para evitar conflito
+                            $result_pratos = $conexao->query($sql_pratos); 
 
                             if ($result_pratos->num_rows > 0) {
                                 while ($row_pratos = $result_pratos->fetch_assoc()) {
@@ -66,7 +66,7 @@
                                         <td>" . $row_pratos['Nome'] . "</td>
                                         <td>" . $row_pratos['Valor'] . "</td>
                                     </tr>";
-                                    $total += $row_pratos['Valor']; // Adicione o valor do item ao total
+                                    $total += $row_pratos['Valor']; 
                                 }
                             }
                         }
@@ -78,7 +78,7 @@
                 <tfoot>
                     <tr>
                         <td><strong>Total:</strong></td>
-                        <td><?php echo $total; ?></td> <!-- Exiba a soma total -->
+                        <td><?php echo $total; ?></td> 
                     </tr>
                 </tfoot>
             </table>
