@@ -29,10 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `clientes` (
   `ID` int(11) NOT NULL,
-  `CPF` varchar(11) DEFAULT NULL,
+  `CPF` varchar(14) DEFAULT NULL,
   `Fidelidade` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 --
 -- Despejando dados para a tabela `clientes`
 --
