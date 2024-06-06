@@ -36,5 +36,23 @@ if ($result->num_rows > 0) {
 }
     ?>
     </div>
+    <script>
+    var timeoutId;
+
+    function redirecionar() {
+        window.location.href = "destaques.php"; 
+    }
+
+    function resetarTemporizador() {
+        clearTimeout(timeoutId); 
+        timeoutId = setTimeout(redirecionar, 30000); 
+    }
+
+    window.onload = function() {
+        timeoutId = setTimeout(redirecionar, 30000); 
+        document.body.addEventListener('click', resetarTemporizador); 
+    };
+</script>
+
 </body>
 </html>

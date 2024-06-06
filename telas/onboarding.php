@@ -34,5 +34,22 @@
             cpfInput.value = cpf;
         }
     </script>
+    <script>
+    var timeoutId;
+
+    function redirecionar() {
+        window.location.href = "destaques.php"; 
+    }
+
+    function resetarTemporizador() {
+        clearTimeout(timeoutId); 
+        timeoutId = setTimeout(redirecionar, 15000); 
+    }
+
+    window.onload = function() {
+        timeoutId = setTimeout(redirecionar, 15000); 
+        document.body.addEventListener('click', resetarTemporizador); 
+    };
+</script>
 </body>
 </html>

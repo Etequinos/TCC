@@ -10,7 +10,7 @@ $prato_ID = $row["ID"];
 session_start();
 
 $mesa_ID = $_SESSION['ID'];
-$sql = "INSERT INTO pedidos (ID, ID_Mesa, ID_Prato, status) VALUES (NULL, '$mesa_ID', '$prato_ID', 0);";
+$sql = "INSERT INTO pedidos (ID, ID_Mesa, ID_Prato, status) VALUES (NULL, '$mesa_ID', '$prato_ID', '0');";
 $resultado = mysqli_query($conexao, $sql);
 }
     header('Location: autorizar-pagamento.php');

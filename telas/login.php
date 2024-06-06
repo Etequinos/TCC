@@ -55,8 +55,23 @@
             ?>
         </form>
     </div>
+    <script>
+    var timeoutId;
 
-     
+    function redirecionar() {
+        window.location.href = "onboarding.php"; 
+    }
+
+    function resetarTemporizador() {
+        clearTimeout(timeoutId); 
+        timeoutId = setTimeout(redirecionar, 30000); 
+    }
+
+    window.onload = function() {
+        timeoutId = setTimeout(redirecionar, 30000); 
+        document.body.addEventListener('click', resetarTemporizador); 
+    };
+</script>
 
 
 

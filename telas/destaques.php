@@ -7,7 +7,7 @@
     <title>Document</title>
 
 </head>
-<body>
+<body onclick=redirecionar()>
     
 <?php //Fiz um codigo gigante, não funcionou, dessisti ?>
 
@@ -52,6 +52,11 @@ function showSlides() {
   setTimeout(showSlides, 2000); // 2 segundos
 }
 </script>
+<script>
 
+function redirecionar() {
+    window.location.href = "onboarding.php"; 
+}
+</script>
 </body>
 </html>

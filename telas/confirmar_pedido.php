@@ -30,6 +30,11 @@
                 </span>
             </div>
         </button>
+        <script>
+    document.getElementById("backBtn").addEventListener("click", function() {
+      window.history.back();
+    });
+</script>
         <h1>RESUMO PEDIDO</h1>
         <form action="chamar-pagamento.php">
             <button type="submit" name="finalizar">FINALIZAR</button>
