@@ -1,5 +1,5 @@
 <?php
-    include_once '../navBar.php';
+    include_once '../navBar-gestao.php';
     ?>
 <?php
 ini_set('display_errors', 1);

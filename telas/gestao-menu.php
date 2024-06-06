@@ -12,7 +12,7 @@
 
 </script>
 <?php
-    include_once '../navBar.php';
+    include_once '../navBar-gestao.php';
     ?>
    
 
