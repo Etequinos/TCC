@@ -15,13 +15,14 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+
 /*---------------------------------------------------------------*/
-.button[id="backBtn"] {
+  button[id="backBtn"] {
     display: block;
     position: relative;
     width: 56px;
     height: 56px;
-    margin: 0;
+    margin:  0px  0px  0px 15px;
     overflow: hidden;
     outline: none;
     background-color: transparent;

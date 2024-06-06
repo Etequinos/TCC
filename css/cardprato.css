@@ -33,7 +33,7 @@ button[name="info_pedido"],button[name="fzr_pedido"] {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+text-align: center;
     
     color: rgb(0, 0, 0);
     font-size: larger;
@@ -45,6 +45,9 @@ button[name="info_pedido"],button[name="fzr_pedido"] {
     text-decoration: none;
   }
   button[name="fzr_pedido"]{
+    display: flex;
+    
+    text-align: center;
     background-color: #B93333;
     color: white;
   }
