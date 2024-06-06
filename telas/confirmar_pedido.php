@@ -31,7 +31,7 @@
             </div>
         </button>
         <h1>RESUMO PEDIDO</h1>
-        <form action="autorizar-pagamento.php">
+        <form action="chamar-pagamento.php">
             <button type="submit" name="finalizar">FINALIZAR</button>
         </form>
     </div>

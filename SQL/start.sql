@@ -109,7 +109,8 @@ CREATE TABLE `pratos` (
 
 INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Imagem`, `Ingredientes`, `status`) VALUES
 (1, 'Prato1', 'Desc Prato 1', 30.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão', '0'),
-(2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate', '0');
+(2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate', '0'),
+(3, 'Pagar Conta', 'Mesa solicitando pagamento da conta', 0, ' ', ' ', '3');
 
 --
 -- Índices para tabelas despejadas
