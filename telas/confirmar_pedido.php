@@ -32,7 +32,7 @@
         </button>
         <h1>RESUMO PEDIDO</h1>
         <form action="autorizar-pagamento.php">
-        <button type="submmit" name="finalizar">FINALIZAR</button>
+            <button type="submit" name="finalizar">FINALIZAR</button>
         </form>
     </div>
 
@@ -82,10 +82,32 @@
                         <td><strong>Total:</strong></td>
                         <td><?php echo $total; ?></td> 
                     </tr>
+                    <tr>
+                        <td><strong>Digite o número de pessoas para dividir:</strong></td>
+                        <td><input type="number" id="numPessoas" name="numPessoas" min="1" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total por pessoa:</strong></td>
+                        <td><span id="totalPorPessoa"><?php echo $total; ?></span></td>
+                    </tr>
                 </tfoot>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById('numPessoas').addEventListener('input', function() {
+        var numPessoas = parseInt(document.getElementById('numPessoas').value);
+        if (numPessoas < 1) {
+            numPessoas = 1;
+            document.getElementById('numPessoas').value = 1;
+        }
+        var total = <?php echo $total; ?>;
+        var totalPorPessoa = total / numPessoas;
+        document.getElementById('totalPorPessoa').innerText = totalPorPessoa.toFixed(2);
+    });
+</script>
+
 </body>
 </html>
