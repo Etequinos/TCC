@@ -36,7 +36,9 @@ h1{
 label[name="ingredientes"]{
     font-size: x-large;
 }
-
+a[name="pedir"]{
+  color: white;  
+}
 /*--------------------------------------------------------*/
 button[id="backBtn"] {
     display: block;

@@ -24,6 +24,8 @@
 button[name="compra"]{
 padding: 15px;
 border-radius: 100%;
+margin-left: 10px;
+
 }
 svg{
     display: flex;
@@ -32,10 +34,14 @@ svg{
 }
 
 .nav-label {
+    margin-right: 500px;
     color: #FFFFFF;
     width: 453px;
     height: 70;
-    margin-left: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     font-size: 40px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -43,14 +49,13 @@ svg{
 .nav-btn {
     height: 54px;
     width: 250px;
+    margin: 30px;
     border-radius: 30px;
     font-size: 35px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.nav-mesa {
-    margin-left: 500px;
-}
+
 
 
 @media (max-width: 900px) {
