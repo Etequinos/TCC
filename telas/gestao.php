@@ -14,7 +14,7 @@ $_g2fa = new Google2FA();
 if (!isset($_SESSION['g2fa_user'])) {
     $user = new stdClass();
     $user->google2fa_secret = "CRBRT55RJS4DYBZB";
-    $user->email = 'username';
+    $user->email = 'Eteqeuinos';
 
     $_SESSION['g2fa_user'] = $user;
 } else {
@@ -38,7 +38,7 @@ $qrCodeUrl = $_g2fa->getQRCodeUrl(
     <title>Document</title>
 </head>
 <body>
-
+  
 <button class="button" id="backBtn">
   <div class="button-box">
     <span class="button-elem">
