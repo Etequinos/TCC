@@ -15,7 +15,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
-
+a[name="pedir"]{
+  color: white;  
+}
 /*---------------------------------------------------------------*/
   button[id="backBtn"] {
     display: block;
