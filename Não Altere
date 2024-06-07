@@ -1,5 +1,6 @@
 # QR Code
 # https://www.qr-code-generator.com
 
-# URL para o QR'''
+# URL para o QR:
 # otpauth://totp/TCC:username?secret=CRBRT55RJS4DYBZB&issuer=TCC&algorithm=SHA1&digits=6&period=30
+#otpauth://totp/TCC:Etequinos?secret=linha de cima=TCC&algorithm=SHA1&digits=6&period=30

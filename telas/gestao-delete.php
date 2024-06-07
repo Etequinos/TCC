@@ -40,8 +40,8 @@
         <div class="content">
         <label for="" name="confirma">Tem certeza que deseja desativar?</label>
         <div class="botoes">
-                <button type="button" name="submit" onclick="window.location.href='gestao-menu.php'">DESATIVAR</button>
-                <button type="submit" name="excluir">EXCLUIR</button>
+                <button type="button" name="submit" onclick="window.location.href='gestao-menu.php'">CANCELAR</button>
+                <button type="submit" name="excluir">DESATIVAR</button>
                 <input type="hidden" name="id" value="<?php echo $id ?>">
             </form>
         </div>
