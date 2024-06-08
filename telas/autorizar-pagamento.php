@@ -40,6 +40,9 @@
 
     <div class="gestao-container">
     <h1>Mostre ao Atendente</h1>
+    <h2>Valor: <?php $valor = $_SESSION['total'];
+    echo $valor;
+    ?></h2>
     <h3>Insira o código para confirmar o pagamento</h3>
     <h2>Código</h2>
     <form method="post" action="valida-pagamento.php">

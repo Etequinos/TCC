@@ -27,7 +27,7 @@ body {
   align-items: center;
   align-content: center;
 }
-.button, a, button[type="submit"] {
+.button, button[type="submit"] {
   display: flex;
   align-items: center;
   justify-content: center;

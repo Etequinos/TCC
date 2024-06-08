@@ -58,7 +58,7 @@
 
             <div id="valor-div">
             <label for="" class="infos">Valor</label>
-                <input type="number" name="valor" value="">
+                <input type="number" name="valor" value="" step="any">
             </div>
 
             <div id="img-div">

@@ -72,7 +72,22 @@ CREATE TABLE `mesa` (
 
 INSERT INTO `mesa` (`ID`, `Status`, `Senha`) VALUES
 (1, 0, 'senha'),
-(2, 0, 'senha');
+(2, 0, 'senha'),
+(4, 0, 'senha'),
+(5, 0, 'senha'),
+(6, 0, 'senha'),
+(7, 0, 'senha'),
+(8, 0, 'senha'),
+(9, 0, 'senha'),
+(10, 0, 'senha'),
+(11, 0, 'senha'),
+(12, 0, 'senha'),
+(13, 0, 'senha'),
+(14, 0, 'senha'),
+(15, 0, 'senha'),
+(16, 0, 'senha'),
+(17, 0, 'senha');
+
 
 -- --------------------------------------------------------
 
@@ -170,7 +185,7 @@ ALTER TABLE `comandas`
 -- AUTO_INCREMENT de tabela `mesa`
 --
 ALTER TABLE `mesa`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
