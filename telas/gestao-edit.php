@@ -72,7 +72,7 @@
 
             <div id="valor-div">
             <label for="" class="infos">Valor</label>
-                <input type="number" name="valor" value="<?php echo $DB_Valor; ?>">
+                <input type="number" name="valor" value="<?php echo $DB_Valor; ?>" step="any">
             </div>
 
             <div id="img-div">

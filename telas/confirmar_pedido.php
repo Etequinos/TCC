@@ -94,6 +94,7 @@
                     <tr>
                         <td><strong>Total por pessoa:</strong></td>
                         <td><span id="totalPorPessoa"><?php echo $total; ?></span></td>
+                        <?php $_SESSION['total'] = $total; ?>
                     </tr>
                 </tfoot>
             </table>

@@ -57,7 +57,20 @@ button[name="finalizar"] {
     border-radius: 15px 15px 0px 0px;
   }
   
- 
+ input[name="numPessoas"]{
+
+    width: 100%; /* Ajustado para caber melhor em telas de tablet */
+    height: 10vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-radius: 15px 5px 15px 5px;
+    font-size: 40px;
+    color: #ffffff; /*cor do texto*/
+    background: #cccccc;
+  }
   tr, td{
     /*border: 1px solid black;*/
   }/*
