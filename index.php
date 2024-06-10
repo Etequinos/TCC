@@ -9,21 +9,17 @@ require 'config.php';
     <title>Document</title>
 </head><center>
 <body>
-    <a href="telas/gestao.php">Gestão</a>
+    <a href="telas/gestao.php"><h1>Gestão</h1></a>
     <br>
-    <a href="telas/v-cozinha.php">Cozinha</a>
+    <a href="telas/v-cozinha.php"><h1>Cozinha</h1></a>
     <br>
-    <a href="telas/v-salao.php">Salão</a>
+    <a href="telas/v-salao.php"><h1>Salão</h1></a>
     <br>
-    <a href="telas/destaques.php">Clientes</a>
+    <a href="telas/destaques.php"><h1>Clientes</h1></a>
     <br>
     <br>
     <br>
     <form action="mesa.php" method="post">
-        <label for="">Numero de Mesas no restaurante:</label>
-        <br>
-        <input type="number" name="mesas" id="mesas">
-        <br><br>
 
         <label for="">Senha dos atendentes:</label>
         <br>

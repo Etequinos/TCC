@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18/05/2024 às 01:38
+-- Tempo de geração: 10/06/2024 às 21:28
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -32,12 +32,14 @@ CREATE TABLE `clientes` (
   `CPF` varchar(14) DEFAULT NULL,
   `Fidelidade` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Despejando dados para a tabela `clientes`
 --
 
 INSERT INTO `clientes` (`ID`, `CPF`, `Fidelidade`) VALUES
-(1, '12345678910', 0);
+(1, '12345678910', 0),
+(2, '240.011.408-02', 1);
 
 -- --------------------------------------------------------
 
@@ -51,7 +53,7 @@ CREATE TABLE `comandas` (
   `ID_Prato` int(11) DEFAULT NULL,
   `Valor_Total` decimal(10,2) DEFAULT NULL,
   `Fidelidade` int(10) DEFAULT NULL,
-  `Status` int(1) DEFAULT '0'
+  `Status` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -88,7 +90,6 @@ INSERT INTO `mesa` (`ID`, `Status`, `Senha`) VALUES
 (16, 0, 'senha'),
 (17, 0, 'senha');
 
-
 -- --------------------------------------------------------
 
 --
@@ -115,7 +116,7 @@ CREATE TABLE `pratos` (
   `Valor` decimal(10,2) DEFAULT NULL,
   `Imagem` varchar(255) DEFAULT NULL,
   `Ingredientes` text DEFAULT NULL,
-   `status` varchar(50) DEFAULT NULL DEFAULT '0'
+  `status` varchar(50) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -125,7 +126,16 @@ CREATE TABLE `pratos` (
 INSERT INTO `pratos` (`ID`, `Nome`, `Descricao`, `Valor`, `Imagem`, `Ingredientes`, `status`) VALUES
 (1, 'Prato1', 'Desc Prato 1', 30.00, 'https://i.imgur.com/0w72DVa.jpeg', 'Farinha e pão', '0'),
 (2, 'Prato2', 'Desc Prato 2', 40.00, 'https://i.imgur.com/HJPoS8Y.jpeg', 'peixe e tomate', '0'),
-(3, 'Pagar Conta', 'Mesa solicitando pagamento da conta', 0, ' ', ' ', '3');
+(3, 'Pagar Conta', 'Mesa solicitando pagamento da conta', 0.00, ' ', ' ', '3'),
+(4, 'Feijoada', 'Feijoada Típica do Brasil, serve até uma pessoa.', 25.00, 'https://i.imgur.com/BTBEwS4.jpeg', 'Vem com Arroz, Feijão Preto com Linguiça, Farofa, Mandioca e Couve.', '0'),
+(5, 'Bife à Parmegiana', 'É um prato paulistano, que acabou sendo copiado por todo o Brasil.', 35.00, 'https://i.imgur.com/ufMxZHe.jpeg', 'Vem com Arroz, Batata Frita e Bife à Parmegiana.', '0'),
+(6, 'Torta de limão', 'Uma deliciosa fatia da torta de limão da casa', 9.90, 'https://i.imgur.com/maxt7LO.jpeg', 'Bolacha maisena, limão, creme', '0'),
+(7, 'Mousse de chocolate com morango', 'Um mousse de chocolate ao leite com morango e lascas de chocolate', 15.50, 'https://i.imgur.com/kgm9EHy.png', 'Chocolate ao leite, creme de chocolate branco, morangos', '0'),
+(8, 'Refrigerante 600ml', 'Coca cola, sprite, fanta', 9.99, 'https://i.imgur.com/l16QiVk.png', '', '0'),
+(9, 'Cerveja', 'Heineken, Skol, Original', 15.00, 'https://i.imgur.com/zwDKRLx.png', '', '0'),
+(10, 'Tábua de carnes', 'Tábua de carnes para 2 pessoas', 67.85, 'https://i.imgur.com/ITw8oyr.png', 'Alcatra, Picanha, Cafta, Torresmo, pão de alho', '0'),
+(11, 'Vatpá', 'Vatapá de camarão com arroz', 42.99, 'https://i.imgur.com/UpSuY01.png', 'Camarão, arroz', '0'),
+(12, 'Feijoada Kids', 'Feijoada em tamanho reduzido para crianças', 15.99, 'https://i.imgur.com/yvB8t8k.png', 'Vem com Arroz, Feijão Preto com Linguiça, Farofa, Mandioca e Couve.', '0');
 
 --
 -- Índices para tabelas despejadas
@@ -173,7 +183,7 @@ ALTER TABLE `pratos`
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `comandas`
@@ -197,7 +207,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de tabela `pratos`
 --
 ALTER TABLE `pratos`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restrições para tabelas despejadas
